@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Display a Circular Photo in Webpage</title>
+	<meta name="description" content="Usually an image is rectangular. However, in many cases we need to display an image in circular shape, e.g. a circular profile photo in a personal home page....">
+	
+	<link rel="canonical" href="http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/20/yuanphoto/">
+	<link rel="alternate" type="application/rss+xml" title="Fan's Farm" href="http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/feed.xml" />
+	
+	<!-- <link rel="stylesheet" href="/~fzheng/css/main.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/~fzheng/static/css/bootstrap.min.css"> -->
+	
+
+	<link rel="stylesheet" type="text/css" href="/~fzheng/static/css/index.css">
+	
+	<!-- <script type="text/javascript" src="/~fzheng/static/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/~fzheng/static/js/bootstrap.min.js"></script> -->
+
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="/~fzheng/static/js/index.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/railscasts.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai.min.css"> -->
+	<!-- <script type="text/javascript" src="http://apps.bdimg.com/libs/highlight.js/8.4/languages/dos.min.js"></script> -->
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?b636473d6ffa17615f94e5db1459ea81";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+</head>
+
+  <body>
+    <div id="main" class="container main">
+       <div  class="row">
+   
+   <div class="col-sm-1">
+        <div id="left-bar">
+          <p><a href="/~fzheng/">Home</a></p>
+            
+            
+              <p><a href="/~fzheng/blog/">Blog</a></p>
+    
+            
+              
+            
+              
+                
+                
+                <p><a href="/~fzheng/archive/"> Archive</a></p>
+              
+            
+              
+                
+                
+                <p><a href="/~fzheng/about/"> About</a></p>
+              
+            
+              
+            
+              
+            
+        </div>
+    </div>
+
+  <div class="col-sm-8 col-sm-offset-1">
+    <div class="post-area post">
+      <header>
+        <h1>Display a Circular Photo in Webpage</h1>
+        <p>Jul 20, 2015</p>
+        <p>
+          
+          <a>#web</a>
+          
+        </p>
+      </header>
+      <article>
+        <p>Usually an image is rectangular. However, in many cases we need to display an image in circular shape, e.g. a circular profile photo in a personal home page. So how?</p>
+
+<p>One intuitive solution is to cut a circular area out of the original photo using some image processing software like Photoshop. But there is some more elegant way. Actually, just a single line of CSS code is enough.</p>
+
+<p>Our tool is ‘border-radius’, which introduces to a rectangular object the effect of border radius, just like what we can see in iOS app icons. Now imagine we increase the border radius of a square shape, until it cover half of a square border. Obviously the square shape finally becomes a circle.</p>
+
+<p><img src="/~fzheng/images/circlephoto.png" alt="circlephoto" /></p>
+
+<p>Now let’s code. Define a class in .css file and let the ‘border-radius’ be 50%:</p>
+
+<pre><code>.yuan { 
+    border-radius:50%;
+}
+</code></pre>
+
+<p>Then in the .html where the photo should be placed, include this class:</p>
+
+<pre><code>&lt;img class="yuan" src="/~fzheng/images/longmao.jpg" width="80%" height="80%"&gt;
+</code></pre>
+
+<p>Done! That’s what I’ve done in the banner of this home page:</p>
+
+<p><img src="/~fzheng/images/banner.png" alt="banner" /></p>
+
+<p>Note that here the original photo is better to be square. If it is rectangular, the result will be an ellipse.</p>
+
+
+      </article>
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+      
+
+  <div id="content" class="col-sm-2">
+    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
+      <div class="categories-list-header">
+        Content
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+    </div>
+
+    <a id="top"></a>
+
+    <!--<div id="disqus_thread"></div>-->
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'fansfarm';
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
+    
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'fansfarm';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+  
+  
+  </body>
+</html>
+
+
+

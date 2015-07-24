@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Create a 'Back to Top' button in Webpages</title>
+	<meta name="description" content="When people visit webpages, especially those with long articles, the function of instantly going back to page top is needed. Although the Home key in keyboar...">
+	
+	<link rel="canonical" href="http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/20/backtotop/">
+	<link rel="alternate" type="application/rss+xml" title="Fan's Farm" href="http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/feed.xml" />
+	
+	<!-- <link rel="stylesheet" href="/~fzheng/css/main.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/~fzheng/static/css/bootstrap.min.css"> -->
+	
+
+	<link rel="stylesheet" type="text/css" href="/~fzheng/static/css/index.css">
+	
+	<!-- <script type="text/javascript" src="/~fzheng/static/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/~fzheng/static/js/bootstrap.min.js"></script> -->
+
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="/~fzheng/static/js/index.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/railscasts.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai.min.css"> -->
+	<!-- <script type="text/javascript" src="http://apps.bdimg.com/libs/highlight.js/8.4/languages/dos.min.js"></script> -->
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?b636473d6ffa17615f94e5db1459ea81";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+</head>
+
+  <body>
+    <div id="main" class="container main">
+       <div  class="row">
+   
+   <div class="col-sm-1">
+        <div id="left-bar">
+          <p><a href="/~fzheng/">Home</a></p>
+            
+            
+              <p><a href="/~fzheng/blog/">Blog</a></p>
+    
+            
+              
+            
+              
+                
+                
+                <p><a href="/~fzheng/archive/"> Archive</a></p>
+              
+            
+              
+                
+                
+                <p><a href="/~fzheng/about/"> About</a></p>
+              
+            
+              
+            
+              
+            
+        </div>
+    </div>
+
+  <div class="col-sm-8 col-sm-offset-1">
+    <div class="post-area post">
+      <header>
+        <h1>Create a 'Back to Top' button in Webpages</h1>
+        <p>Jul 20, 2015</p>
+        <p>
+          
+          <a>#web</a>
+          
+        </p>
+      </header>
+      <article>
+        <p>When people visit webpages, especially those with long articles, the function of instantly going back to page top is needed. Although the Home key in keyboard is a ready-built solution, some people don’t know this function and prefer using mouse. Besides, there are machines without Home key, like Macbook. Therefore, to make a more user-friendly webpage, it is useful to put a ‘back to top’ button.</p>
+
+<p>Just in this page you are visiting there is such one. Using CSS and jQuery, the button is designed so that it doesn’t appear until the reader scrolls for some distance from the beginning of the webpage, and when the button is clicked on, the webpage automatically scrolls back to the page top. Below is my code to achieve such effect.</p>
+
+<p>First, define an id for the shape and style of the button in the .css file:</p>
+
+<pre><code>#top {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    width: 50px;
+    height: 50px;
+    background: lightblue url(top-arrow.svg) no-repeat center 50%;
+    opacity: 0.8;
+    display: none;
+    z-index: 888;
+}
+</code></pre>
+
+<p>Here the position of the button is set as fixed in the screen, with distance of 2 em (length of 2 latin letters) to the right border and the bottom respectively. The <code>background</code> line includes a .svg file which defines the button shape:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"&gt;
+&lt;polygon fill="#FFFFFF" points="8,2.8 16,10.7 13.6,13.1 8.1,7.6 2.5,13.2 0,10.7 "/&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<p>Then we can show the button in our webpage just by introducing a link in the .html file and including this id:</p>
+
+<pre><code>&lt;a id="top"&gt;&lt;/a&gt;
+</code></pre>
+
+<p>Next, to make the button responsive to reader’s operation, write functions in the .js file:</p>
+
+<pre><code>$(document).ready(function() {
+    categoryDisplay();
+    generateContent();
+    backToTop();
+});
+
+function categoryDisplay(){/*implementation hidden*/}
+function generateContent(){/*implementation hidden*/}
+
+function backToTop() {
+    $(window).scroll(function() {
+        if ($(window).scrollTop() &gt; 100) {
+            $("#top").fadeIn(500);
+        } else {
+            $("#top").fadeOut(500);
+        }
+    });
+    $("#top").on('click', function(event) {
+        $("body,html").animate({
+            scrollTop: 0,
+        });
+    });
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+}
+</code></pre>
+
+<p>Here the <code>backToTop</code> function defines the required behaviours of the button. The first method tells the button when to appear (after scrolling for 100 pixels) and when to disappear. The second creates an event of scrolling to top when the button is clicked. The third one is not very important, just for showing tips. Note that to achieve these functions, jQuery is essential.</p>
+
+<p>And that’s all work required to create a back-to-top button, enjoy!</p>
+
+<hr />
+
+<p>PS: to make the webpage scrolling to top, there is one more easy method. We know that a url with the ‘#’ symbol in the end targets to the page top, so you can just implement the link in your .html like this:</p>
+
+<pre><code>&lt;a href="#" id="top"&gt;&lt;/a&gt;
+</code></pre>
+
+<p>However, this results in an unsatisfactory effect. After you click on the button, actually you jump to a page with different url (since a ‘#’ is appended):</p>
+
+<p><img src="/~fzheng/images/beforeclick.png" alt="banner" />
+<img src="/~fzheng/images/afterclick.png" alt="banner" /></p>
+
+<p>Although we are still in the same page, the browser doesn’t think so. 
+When you need to go back to the previous webpage you have visited, you have to click twice on the Back button (the first time just for jumping to the location before you click on the back-to-top button), which is kind of annoying. In contrast, using jQuery function can prevent this problem. You can try the back-to-top button in this page, it won’t lead you to a different url with ‘#’ symbol.</p>
+
+
+      </article>
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+      
+
+  <div id="content" class="col-sm-2">
+    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
+      <div class="categories-list-header">
+        Content
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+    </div>
+
+    <a id="top"></a>
+
+    <!--<div id="disqus_thread"></div>-->
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'fansfarm';
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
+    
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'fansfarm';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+  
+  
+  </body>
+</html>
+
+
+

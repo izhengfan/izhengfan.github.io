@@ -1,0 +1,55 @@
+---
+layout: default
+---
+ <div  class="row">
+   
+   <div class="col-sm-1">
+        <div id="left-bar">
+          <p><a href="{{ site.baseurl }}/">Home</a></p>
+            {% if page.url == "/blog/" %}
+              {% else %}
+            {% endif %}
+              <p><a href="{{ site.baseurl }}/blog/">Blog</a></p>
+    
+            {% for p in site.pages %}
+              {% if p.title %}
+                {% if p.url == page.url %}
+                  {% else %}
+                {% endif %}
+                <p><a href="{{ p.url | prepend: site.baseurl }}"> {{ p.title }}</a></p>
+              {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+  <div class="col-sm-8 col-sm-offset-1">
+    <div class="post-area post">
+      <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        <p>
+          {% for category in page.categories %}
+          <a>#{{ category }}</a>
+          {% endfor %}
+        </p>
+      </header>
+      <article>
+        {{content}}
+      </article>
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+      
+
+  <div id="content" class="col-sm-2">
+    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
+      <div class="categories-list-header">
+        Content
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+
+</div>
+
+

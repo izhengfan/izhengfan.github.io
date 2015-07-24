@@ -1,0 +1,381 @@
+/**
+ * Reset some basic elements
+ */
+/* commom */
+body {
+	position: relative;
+	font-family: "Microsoft JhengHei","Microsoft YaHei",sans-serif;
+}
+article p{
+	text-align: justify;
+}
+
+pre{
+	padding: 0;
+	background: none;
+}
+
+pre code{
+	font-size: 14px;
+}
+
+table{
+	border-top:0px solid #777;
+	border-bottom: 0px solid #777;
+	margin: 8px 0;
+}
+table thead{
+	border-bottom: 1px dashed #777;
+	background-color: #aaa;
+	color:#fff;
+}
+table th{
+	padding: 2px 10px;
+}
+table tr:nth-child(2n){
+	background-color: rgb(255, 245, 235);
+}
+table td{
+}
+
+#blog-table{
+	background-color: white;
+}
+
+a {color: rgb(220, 0, 0)}
+a:visited {color: rgb(220, 0, 0)}
+a:hover {color: rgb(10, 10, 10);text-decoration: none;}
+
+#index a:link {color: rgb(220, 0, 0)}	
+#index a:visited {color: rgb(220, 0, 0)}	
+#index a:hover {color: rgb(10, 10, 10);text-decoration: none;}	
+
+/* index main */
+.main{
+	min-height: 800px;
+	padding-top: 2em;
+	padding-bottom: 6em;
+}
+.post-area{
+	
+	background-color:none;
+	padding-bottom: 4em;
+}
+
+.post-area .post{
+}
+.post-list-header{
+	padding: 15px 30px;
+	border-bottom: 1px solid #c0c0c0;
+	font-size: 30px;
+	font-weight: bold;
+}
+.post-list-item{
+	display: block;
+	font-size: 130%;
+	color: rgb(220, 0, 0);
+	padding:8px 30px 10px 30px; 
+	border-bottom:0px solid #ddd;
+
+	transition:0.4s ease; 
+	-webkit-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+.post-list-item:last-of-type{
+	border-bottom: none;
+}
+.post-list-item h2{
+	font-size: 20px;
+	margin: 8px 0 8px 0;
+	padding: 0;
+}
+
+.post-list-item span{
+	color: gray;
+}
+
+.post-list-item:hover{
+}
+h3{
+	color: rgb(220, 0, 0);
+}
+
+/* categories list */
+.categories-list-header {
+	display: block;
+	padding: 12px 15px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.categories-list-item{
+	display: block;
+	padding:8px 15px; 
+	color: rgb(220, 0, 0);
+
+	transition:0.4s ease;
+	-webkit-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+.categories-list-item:last-of-type{
+	border-bottom:none; 
+}
+.categories-list-item:hover{
+	/*background-color: rgba(0,0,10,0.075);*/
+}
+.categories-list-item .my-badge{
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	background-color: gray;
+	padding: 0 7px 1px 7px;
+	border-radius: 9px;
+	float: right;
+	transition:0.4s ease;
+	-webkit-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+.categories-list-item:hover .my-badge{
+	-webkit-transform:rotate(360deg) scale(1.2);
+	-moz-transform:rotate(360deg) scale(1.2);
+	-o-transform:rotate(360deg) scale(1.2);
+	-ms-transform:rotate(360deg) scale(1.2);
+	transform:rotate(360deg) scale(1.2);
+}
+
+/* shadow */
+.shadow-corner-curl{
+	position: relative;
+}
+.shadow-corner-curl:before{
+	content:"";
+	position: absolute;
+	z-index: -5;
+	width: 70%;
+	height:70%;
+	left: 9%;
+	bottom: 2%;
+	background: transparent;
+
+	/* 向左倾斜12度，再旋转4度 */
+	-webkit-transform:skew(-11deg) rotate(-4deg);
+	-moz-transform:skew(-11deg) rotate(-4deg);
+	-o-transform:skew(-11deg) rotate(-4deg);
+	-ms-transform:skew(-11deg) rotate(-4deg);
+	transform:skew(-11deg) rotate(-4deg);
+}
+.shadow-corner-curl:after{
+	content:"";
+	position: absolute;
+	z-index: -5;
+	width: 70%;
+	height:70%;
+	right: 9%;
+	bottom: 2%;
+	background: transparent;
+	/* 向左倾斜12度，再旋转4度 */
+	-webkit-transform:skew(11deg) rotate(4deg);
+	-moz-transform:skew(11deg) rotate(4deg);
+	-o-transform:skew(11deg) rotate(4deg);
+	-ms-transform:skew(11deg) rotate(4deg);
+	transform:skew(11deg) rotate(4deg);
+}
+
+/* footer */
+footer{
+	min-height: 50px;
+	line-height: 50px;
+	margin-top: 80px;
+	background: #E6E6E6;
+	color: black;
+	text-align: center;
+
+}
+
+footer .point{
+	margin: 0 8px;
+}
+/**
+ * Icons
+ */
+.icon svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* post
+ * post articles area
+ */
+.post{
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.post h1{
+	font-size: 190%;
+}
+
+.post h4{
+	font-weight: bold;
+}
+
+.post img{
+	max-width: 100%;
+    vertical-align: middle;
+
+}
+
+.post article{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: #444;
+    border-left: 2px solid rgb(220, 0, 0);
+    padding-left: 15px;
+    font-size: 16px;
+	background-color: rgb(255, 245, 235);
+}
+blockquote:last-child {
+    margin-bottom: 0;
+}
+
+.comment{
+	margin-top: 20px;
+}
+
+/**
+ * back to top
+ */
+#top {
+	position: fixed;
+	right: 2em;
+	bottom: 2em;
+	width: 50px;
+	height: 50px;
+	background: rgb(255, 210, 210) url(top-arrow.svg) no-repeat center 50%;
+	opacity: 0.8;
+	display: none;
+	z-index: 888;
+}
+
+
+legend{
+	border-bottom: 0px;
+	vertical-align: bottom;
+	font-weight: 600;
+}
+
+
+/**
+ * page-content
+ */
+.page-content table{
+	border-top: 0px dashed #ddd;
+	border-bottom: 0px dashed #ddd;
+	margin: 20px 0;
+}
+.page-content table tr td{
+	padding: 6px 10px;
+	vertical-align: middle;
+
+}
+.page-content table tr td:first-of-type{
+	padding: 6px 10px 6px 10px;
+	border-right: 0px dashed #ddd; 
+	text-align: right;
+}
+
+
+/**
+ * 文章目录相关
+ */
+@media screen and (min-width: 768px){
+	#markdown-toc {
+		display: none;
+	}
+}
+
+#content a:link {color: #666}
+#content a:visited {color: #666}
+#content a:hover {color: rgb(220, 0, 0);text-decoration: none;}	
+#content{
+	max-width: 18em;
+}
+#content .content-text{
+	max-width: 18em;
+	padding: 10px 0; 
+}
+#content ul{
+	padding-left: 30px;
+}
+#content ul li{
+	font-size: 15px;
+	line-height: 25px;
+}
+
+
+#myAffix .affix{
+	top:-20px;
+	bottom: 0px;
+}
+
+
+.yuan { 
+	border-radius:50%;
+}
+
+#left-bar {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	font-size: 120%;
+	font-weight: 100;
+	text-align: right;
+}
+
+#left-bar a:link{color: rgb(10, 10, 10);text-decoration: none;}
+#left-bar a:visited {color: rgb(10, 10, 10)}
+#left-bar a:hover {color: rgb(220, 0, 0);}	
+
+
+#banner {
+	padding-left: 1em;
+	vertical-align:  -webkit-baseline-middle;
+	
+}
+#banner-left {
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
+#banner-left a:link {color: rgb(220, 0, 0)}
+#banner-left a:visited {color: rgb(220, 0, 0)}
+#banner-left a:hover {color: rgb(10, 10, 10);text-decoration: none;}	 
+
+/*@media screen and (max-width: 1200px){
+	.post{
+		padding:10px 10px;
+		font-size: 15px;
+		line-height: 1.4;
+	}
+	blockquote {
+		border-left: 3px solid #D6DBDF;
+    	padding-left: 5px;
+    	font-size: 14px;
+	}
+	pre code{
+		font-size: 12px;
+	}
+	.post article ul{
+		padding-left: 25px;
+	}
+}*/

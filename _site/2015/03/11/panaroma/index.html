@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Automatic Panoramic Mosaic Stitching</title>
+	<meta name="description" content="">
+	
+	<link rel="canonical" href="http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/03/11/panaroma/">
+	<link rel="alternate" type="application/rss+xml" title="Fan's Farm" href="http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/feed.xml" />
+	
+	<!-- <link rel="stylesheet" href="/~fzheng/css/main.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/~fzheng/static/css/bootstrap.min.css"> -->
+	
+
+	<link rel="stylesheet" type="text/css" href="/~fzheng/static/css/index.css">
+	
+	<!-- <script type="text/javascript" src="/~fzheng/static/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/~fzheng/static/js/bootstrap.min.js"></script> -->
+
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="/~fzheng/static/js/index.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/railscasts.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai.min.css"> -->
+	<!-- <script type="text/javascript" src="http://apps.bdimg.com/libs/highlight.js/8.4/languages/dos.min.js"></script> -->
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?b636473d6ffa17615f94e5db1459ea81";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+</head>
+
+  <body>
+    <div id="main" class="container main">
+       <div  class="row">
+   
+   <div class="col-sm-1">
+        <div id="left-bar">
+          <p><a href="/~fzheng/">Home</a></p>
+            
+            
+              <p><a href="/~fzheng/blog/">Blog</a></p>
+    
+            
+              
+            
+              
+                
+                
+                <p><a href="/~fzheng/archive/"> Archive</a></p>
+              
+            
+              
+                
+                
+                <p><a href="/~fzheng/about/"> About</a></p>
+              
+            
+              
+            
+              
+            
+        </div>
+    </div>
+
+  <div class="col-sm-8 col-sm-offset-1">
+    <div class="post-area post">
+      <header>
+        <h1>Automatic Panoramic Mosaic Stitching</h1>
+        <p>Mar 11, 2015</p>
+        <p>
+          
+          <a>#computer_vision</a>
+          
+        </p>
+      </header>
+      <article>
+        <ul id="markdown-toc">
+  <li><a href="#download-code" id="markdown-toc-download-code">Download Code</a></li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#basic-algorithm" id="markdown-toc-basic-algorithm">Basic Algorithm</a></li>
+  <li><a href="#step-1-radial-distortion-correction" id="markdown-toc-step-1-radial-distortion-correction">STEP 1. Radial Distortion Correction</a></li>
+  <li><a href="#step-2-distinctive-feature-extraction" id="markdown-toc-step-2-distinctive-feature-extraction">STEP 2. Distinctive Feature Extraction</a></li>
+  <li><a href="#step-3-pairwise-alignment" id="markdown-toc-step-3-pairwise-alignment">STEP 3. Pairwise Alignment</a></li>
+  <li><a href="#step-4-global-align-and-stitching" id="markdown-toc-step-4-global-align-and-stitching">STEP 4. Global Align and Stitching</a></li>
+  <li><a href="#step-5-spherical-coordinates-warping-and-final-blending" id="markdown-toc-step-5-spherical-coordinates-warping-and-final-blending">STEP 5. Spherical Coordinates Warping and Final Blending</a></li>
+  <li><a href="#experimental-results" id="markdown-toc-experimental-results">Experimental Results</a></li>
+</ul>
+
+<h3 id="download-code">Download Code</h3>
+
+<p><a href="https://github.com/izhengfan/panorama">Click here.</a></p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>A panorama, is some wide-angle view of a physical space in a photograph.</p>
+
+<p>In general, optical flow describes a dense vector field, where a displacement vector is assigned to each pixel, which points to where that pixel can be found in another image. An example is shown as below.</p>
+
+<p><img src="/~fzheng/images/panorama.jpg" width="100%" /></p>
+
+<p>This project is a solution for Assignment 2 Automatic Panoramic Mosaic Stitching of the course Image Processing and Computer Vision (ENGG 5104, CUHK, 2015 Spring). In this project, I implement an algorithm for aligning several photos and stitching them into a seamless panorama.</p>
+
+<h3 id="basic-algorithm">Basic Algorithm</h3>
+
+<ol>
+  <li>
+    <p>Correct radial distortion in each image;</p>
+  </li>
+  <li>
+    <p>Extract distinctive features for each image;</p>
+  </li>
+  <li>
+    <p>Align input images pairwisely;</p>
+  </li>
+  <li>
+    <p>Automatically stitch images, i.e. compute the transformation matrix for each image to the final panorama;</p>
+  </li>
+  <li>
+    <p>Warp the images and stitch them into the final panorama.</p>
+  </li>
+</ol>
+
+<h3 id="step-1-radial-distortion-correction">STEP 1. Radial Distortion Correction</h3>
+
+<p>(Related file: WarpSpherical.cpp; Related routine: WarpRDField.)</p>
+
+<p>The photo captured by cameras may have radial distortion. The simplified model of radial distortion is</p>
+
+<p><img src="/~fzheng/images/eq1.jpg" /></p>
+
+<p>where x’n and y’n are normalized image coordinates, i.e.</p>
+
+<p><img src="/~fzheng/images/eq1_p0.jpg" /></p>
+<p><img src="/~fzheng/images/eq1_p1.jpg" /></p>
+
+<p>The distorted image coordinates are</p>
+
+<p><img src="/~fzheng/images/eq2.jpg" /></p>
+
+<p>Apply inverse mapping of this model to obtain undistorted images.</p>
+
+<h3 id="step-2-distinctive-feature-extraction">STEP 2. Distinctive Feature Extraction</h3>
+
+<p>SIFT is adopted here. Refer to <a href="http://www.cs.ubc.ca/~lowe/keypoints/">SIFT</a>.</p>
+
+<h3 id="step-3-pairwise-alignment">STEP 3. Pairwise Alignment</h3>
+
+<p>(Related files: FeatureMatch.cpp, FeatureAlign.cpp; Related routines: FeatureMatchByDistRatio, alignPair, countInliers, and leastSquaresFit.)</p>
+
+<p>This part is to compute the transform from image i to image j for each pair (i, j).</p>
+
+<p>First of all, find matching feature points (in image j to image i). The intial matching is decided using Euclidean distance. For each feature point descriptor in image i, compute the its Euclidean distance to every feature point descriptor in image j. If the ratio between the distance of the nearest neighbor and the second nearest neighbor is less than some threshold r, the feature point is regarded as distinctive; otherwise the feature point will not be used. Note that the distinctiveness is critical for images with repeated patterns such as textures.</p>
+
+<p>Then RANSAC algorithm is used to find the transform. RANSAC is an iterative algorithm. In each iteration, it randomly selects two pairs of matching points and compute the transformation matrix. With this tranformation matrix, compute how many items in all matching points fit the transform model within a given tolarence, and keep the inliers and inlier number of this iteration. After a given nubmer of iterations, pick the iteration with largest number of inliers, whose transform model and corresponding inliers are accepted. Finally, the full homography is then estimated by these inliners using.</p>
+
+<p>Here is a vedio illustrating RANSAC vividly:</p>
+
+<div class="embed-responsive embed-responsive-16by9"><iframe width="100%" src="https://www.youtube.com/embed/1YNjMxxXO-E" frameborder="0" allowfullscreen=""></iframe></div>
+
+<h3 id="step-4-global-align-and-stitching">STEP 4. Global Align and Stitching</h3>
+
+<p>(Related file: GlobalAlign.cpp; Related routine: initGlobalAlign.)</p>
+
+<p>This part involves how to transform all the images to a common plane.</p>
+
+<p>First, only the good matchings between images are kept. Then the matchings are sorted by their strength (i.e. the number of inliers). After that, the images are added according to the next strongest match (and other relevant matches) to current stitch and perform global alignment every time.</p>
+
+<h3 id="step-5-spherical-coordinates-warping-and-final-blending">STEP 5. Spherical Coordinates Warping and Final Blending</h3>
+
+<p>(Related files: WarpSpherical.cpp, BlendImages.cpp; Related routines: WarpSphericalField, BlendImages, AccumulateBlend, NormalizeBlend.)</p>
+
+<p>From the point of view of camera, a large nubmer of images can be considered to be taken in the sphere center from different orientation of a sphere. This part executes blending useing inverse mapping of spherical coordinates warping. The correspondence of each pixel in the panorama is searched for each image. The computation is: for a pixel in the panorama (xsph, ysph),</p>
+
+<div class="row" id="rowimg">
+    <div class="col-sm-3" id="illuwd">
+        <img src="/~fzheng/images/eq4.jpg" width="100%" />
+    </div>
+    <div class="col-sm-4" id="inimg">
+    </div>
+    <div class="col-sm-5" id="inimg">
+        <img src="/~fzheng/images/sphere.jpg" width="100%" />
+    </div>
+</div>
+<p><br /></p>
+
+<h3 id="experimental-results">Experimental Results</h3>
+
+<p>For experimental process, refer to my <a href="https://github.com/izhengfan/panorama">Github project</a>.</p>
+
+<p>The input images are:</p>
+
+<p><img src="/~fzheng/images/inputimg.jpg" width="100%" /></p>
+
+<p>After executing my algorithm, the output image is:</p>
+
+<p><img src="/~fzheng/images/panorama.jpg" width="100%" /></p>
+
+
+      </article>
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+      
+
+  <div id="content" class="col-sm-2">
+    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
+      <div class="categories-list-header">
+        Content
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+    </div>
+
+    <a id="top"></a>
+
+    <!--<div id="disqus_thread"></div>-->
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'fansfarm';
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
+    
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'fansfarm';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+  
+  
+  </body>
+</html>
+
+
+

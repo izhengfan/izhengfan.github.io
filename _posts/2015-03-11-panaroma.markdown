@@ -1,0 +1,115 @@
+---
+layout: post
+title:  "Automatic Panoramic Mosaic Stitching"
+date:   2015-03-11 23:53:41
+categories: [Computer_Vision]
+---
+* content
+{:toc}
+
+### Download Code
+
+[Click here.](https://github.com/izhengfan/panorama)
+
+
+### Introduction
+
+A panorama, is some wide-angle view of a physical space in a photograph.
+
+In general, optical flow describes a dense vector field, where a displacement vector is assigned to each pixel, which points to where that pixel can be found in another image. An example is shown as below.
+
+<p><IMG src="{{ site.baseurl }}/images/panorama.jpg" width="100%"></p>
+
+
+This project is a solution for Assignment 2 Automatic Panoramic Mosaic Stitching of the course Image Processing and Computer Vision (ENGG 5104, CUHK, 2015 Spring). In this project, I implement an algorithm for aligning several photos and stitching them into a seamless panorama.
+
+### Basic Algorithm
+
+1. Correct radial distortion in each image;
+
+2. Extract distinctive features for each image;
+
+3. Align input images pairwisely;
+
+4. Automatically stitch images, i.e. compute the transformation matrix for each image to the final panorama;
+
+5. Warp the images and stitch them into the final panorama.
+
+### STEP 1. Radial Distortion Correction
+
+(Related file: WarpSpherical.cpp; Related routine: WarpRDField.)
+
+The photo captured by cameras may have radial distortion. The simplified model of radial distortion is
+
+<p><img src="{{ site.baseurl }}/images/eq1.jpg"></p>
+
+where x'n and y'n are normalized image coordinates, i.e.
+
+<p><IMG src="{{ site.baseurl }}/images/eq1_p0.jpg"></p>
+<p><IMG src="{{ site.baseurl }}/images/eq1_p1.jpg"></p>
+
+
+The distorted image coordinates are
+
+<p><IMG src="{{ site.baseurl }}/images/eq2.jpg"></p>
+
+
+Apply inverse mapping of this model to obtain undistorted images.
+
+### STEP 2. Distinctive Feature Extraction
+
+SIFT is adopted here. Refer to [SIFT](http://www.cs.ubc.ca/~lowe/keypoints/).
+
+
+### STEP 3. Pairwise Alignment
+
+(Related files: FeatureMatch.cpp, FeatureAlign.cpp; Related routines: FeatureMatchByDistRatio, alignPair, countInliers, and leastSquaresFit.)
+
+This part is to compute the transform from image i to image j for each pair (i, j).
+
+First of all, find matching feature points (in image j to image i). The intial matching is decided using Euclidean distance. For each feature point descriptor in image i, compute the its Euclidean distance to every feature point descriptor in image j. If the ratio between the distance of the nearest neighbor and the second nearest neighbor is less than some threshold r, the feature point is regarded as distinctive; otherwise the feature point will not be used. Note that the distinctiveness is critical for images with repeated patterns such as textures.
+
+Then RANSAC algorithm is used to find the transform. RANSAC is an iterative algorithm. In each iteration, it randomly selects two pairs of matching points and compute the transformation matrix. With this tranformation matrix, compute how many items in all matching points fit the transform model within a given tolarence, and keep the inliers and inlier number of this iteration. After a given nubmer of iterations, pick the iteration with largest number of inliers, whose transform model and corresponding inliers are accepted. Finally, the full homography is then estimated by these inliners using.
+
+Here is a vedio illustrating RANSAC vividly:
+
+
+<div class="embed-responsive embed-responsive-16by9"><iframe width="100%" src="https://www.youtube.com/embed/1YNjMxxXO-E" frameborder="0" allowfullscreen></iframe></div>
+
+### STEP 4. Global Align and Stitching
+
+(Related file: GlobalAlign.cpp; Related routine: initGlobalAlign.)
+
+This part involves how to transform all the images to a common plane.
+
+First, only the good matchings between images are kept. Then the matchings are sorted by their strength (i.e. the number of inliers). After that, the images are added according to the next strongest match (and other relevant matches) to current stitch and perform global alignment every time.
+
+### STEP 5. Spherical Coordinates Warping and Final Blending
+
+(Related files: WarpSpherical.cpp, BlendImages.cpp; Related routines: WarpSphericalField, BlendImages, AccumulateBlend, NormalizeBlend.)
+
+From the point of view of camera, a large nubmer of images can be considered to be taken in the sphere center from different orientation of a sphere. This part executes blending useing inverse mapping of spherical coordinates warping. The correspondence of each pixel in the panorama is searched for each image. The computation is: for a pixel in the panorama (xsph, ysph),
+
+<div class="row" id="rowimg">
+    <div class="col-sm-3" id="illuwd">
+        <img src="{{ site.baseurl }}/images/eq4.jpg" width="100%">
+    </div>
+    <div class="col-sm-4" id="inimg">
+    </div>
+    <div class="col-sm-5" id="inimg">
+        <img src="{{ site.baseurl }}/images/sphere.jpg" width="100%">
+    </div>
+</div><br>
+
+### Experimental Results
+
+For experimental process, refer to my [Github project](https://github.com/izhengfan/panorama).
+
+The input images are:
+
+<p><img src="{{ site.baseurl }}/images/inputimg.jpg" width="100%"></p>
+
+After executing my algorithm, the output image is:
+
+<p><img src="{{ site.baseurl }}/images/panorama.jpg" width = "100%"></p>
+

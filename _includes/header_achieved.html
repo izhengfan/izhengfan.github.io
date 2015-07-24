@@ -1,0 +1,29 @@
+
+<div class="row">
+  <div class="col-sm-2">
+    <a href="{{ site.baseurl }}/">Home</a>
+     <ul>
+
+        {% if page.url == "/blog/" %}
+          <li class="active">
+          {% else %}
+          <li>
+        {% endif %}
+          <!--<a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-th-large"></span>Blog</a></li>-->
+          <a href="{{ site.baseurl }}/blog/">Blog</a></li>
+
+        {% for p in site.pages %}
+          {% if p.title %}
+            {% if p.url == page.url %}
+              <li class="active">
+              {% else %}
+              <li>
+            {% endif %}
+            <a href="{{ p.url | prepend: site.baseurl }}"> {{ p.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+  
+</div>
+

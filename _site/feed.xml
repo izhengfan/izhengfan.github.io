@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fan&#39;s Farm</title>
+    <description>Fan&#39;s Blog</description>
+    <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/</link>
+    <atom:link href="http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 24 Jul 2015 06:43:53 +0000</pubDate>
+    <lastBuildDate>Fri, 24 Jul 2015 06:43:53 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>大圣归来：好故事，没讲透</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/~fzheng/images/dasheng.jpg&quot; alt=&quot;大圣归来&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;《大圣归来》好评如潮，是“世无英雄，竖子成名”。平心而论，它还不错，但目前豆瓣评分 8.0+，过誉无疑。7.0-7.5 较合适。由此也可见，中国观众对认真的国产电影仍很包容。&lt;/p&gt;
+
+&lt;p&gt;故事是好故事。从《西游记》截取片段，转而化之，萃取出一个曾辉煌过的超级英雄走出压抑满血归来的主线，这条线的关键人物是一个萌娃，解开英雄的封印，一路同行从陌生到熟识，到最后激发英雄觉醒。加上一众卖萌搞笑的配角和高冷贵公子式的反派，这其实是一个非常喜闻乐见的动画英雄故事套路。而西游记的大背景，为这个套路渲染出迥异于美国动画的魅力。&lt;/p&gt;
+
+&lt;p&gt;在对《西游记》资源的利用上，电影相当成功。江流儿的形象，让儿童唐僧与孙悟空相遇，成为他解开法印的钥匙，无疑是神来之笔。土地爷被画成短小矮胖土精灵，简直是新一代萌神。白龙一出现，惊艳全场——怎么中国龙的形象到现在才有人用 3D 在电影屏幕上呈现啊？除了《西游记》文本，多少年来用影像演绎《西游记》的成功之作，也足以构成浩瀚的背景资源。于是，《大闹天宫》《大话西游》等一代神作，都在这部新片里被一一致敬，观众会心一笑。&lt;/p&gt;
+
+&lt;p&gt;然而，不足之处也很明显。配乐属于很努力但只考了及格——我们当然注意到打斗时的古筝，注意到致敬各种经典之作的经典配乐，但这一切并没有融合好，通片的音乐节奏是紊乱、没有主题的，是一份略显杂乱的拼盘。对了，《勇敢的心》是大败笔，扣分最多。&lt;/p&gt;
+
+&lt;p&gt;更大的不足，是故事没讲清楚。主线上，大圣和江流儿为什么要一起踏上冒险之旅，猪八戒为什么要加入，没有交代清楚。反派为什么要和孙悟空过不去，没交代清楚（他一开始只是要抢掠童男童女啊）。大圣法印解开的机理是什么？（因为爱？呃……）支线上更乱：白龙为什么出现，为什么一开始凶神恶煞后来就成孙悟空坐骑？江流儿师傅苦寻江流儿，为什么最后会找到反派的巢穴？&lt;/p&gt;
+
+&lt;p&gt;故事不讲清，很影响观影感受。节奏上，吾气一以贯之，中间断了，大不爽。这次票房大赚，主创团队能做续集了，期待更佳表现。&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=&quot;gray&quot;&gt;First published in: &lt;/font&gt;&lt;a href=&quot;http://movie.douban.com/review/7545735/&quot;&gt;豆瓣&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jul 2015 22:46:00 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/23/dashengguilai/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/23/dashengguilai/</guid>
+        
+        
+        <category>电影</category>
+        
+      </item>
+    
+      <item>
+        <title>Create a &#39;Back to Top&#39; button in Webpages</title>
+        <description>&lt;p&gt;When people visit webpages, especially those with long articles, the function of instantly going back to page top is needed. Although the Home key in keyboard is a ready-built solution, some people don’t know this function and prefer using mouse. Besides, there are machines without Home key, like Macbook. Therefore, to make a more user-friendly webpage, it is useful to put a ‘back to top’ button.&lt;/p&gt;
+
+&lt;p&gt;Just in this page you are visiting there is such one. Using CSS and jQuery, the button is designed so that it doesn’t appear until the reader scrolls for some distance from the beginning of the webpage, and when the button is clicked on, the webpage automatically scrolls back to the page top. Below is my code to achieve such effect.&lt;/p&gt;
+
+&lt;p&gt;First, define an id for the shape and style of the button in the .css file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#top {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    width: 50px;
+    height: 50px;
+    background: lightblue url(top-arrow.svg) no-repeat center 50%;
+    opacity: 0.8;
+    display: none;
+    z-index: 888;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here the position of the button is set as fixed in the screen, with distance of 2 em (length of 2 latin letters) to the right border and the bottom respectively. The &lt;code&gt;background&lt;/code&gt; line includes a .svg file which defines the button shape:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt;!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&amp;gt;
+&amp;lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&amp;gt;
+&amp;lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot;
+     width=&quot;16px&quot; height=&quot;16px&quot; viewBox=&quot;0 0 16 16&quot; enable-background=&quot;new 0 0 16 16&quot; xml:space=&quot;preserve&quot;&amp;gt;
+&amp;lt;polygon fill=&quot;#FFFFFF&quot; points=&quot;8,2.8 16,10.7 13.6,13.1 8.1,7.6 2.5,13.2 0,10.7 &quot;/&amp;gt;
+&amp;lt;/svg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then we can show the button in our webpage just by introducing a link in the .html file and including this id:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a id=&quot;top&quot;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, to make the button responsive to reader’s operation, write functions in the .js file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(document).ready(function() {
+    categoryDisplay();
+    generateContent();
+    backToTop();
+});
+
+function categoryDisplay(){/*implementation hidden*/}
+function generateContent(){/*implementation hidden*/}
+
+function backToTop() {
+    $(window).scroll(function() {
+        if ($(window).scrollTop() &amp;gt; 100) {
+            $(&quot;#top&quot;).fadeIn(500);
+        } else {
+            $(&quot;#top&quot;).fadeOut(500);
+        }
+    });
+    $(&quot;#top&quot;).on(&#39;click&#39;, function(event) {
+        $(&quot;body,html&quot;).animate({
+            scrollTop: 0,
+        });
+    });
+    $(function() {
+        $(&#39;[data-toggle=&quot;tooltip&quot;]&#39;).tooltip();
+    });
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here the &lt;code&gt;backToTop&lt;/code&gt; function defines the required behaviours of the button. The first method tells the button when to appear (after scrolling for 100 pixels) and when to disappear. The second creates an event of scrolling to top when the button is clicked. The third one is not very important, just for showing tips. Note that to achieve these functions, jQuery is essential.&lt;/p&gt;
+
+&lt;p&gt;And that’s all work required to create a back-to-top button, enjoy!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;PS: to make the webpage scrolling to top, there is one more easy method. We know that a url with the ‘#’ symbol in the end targets to the page top, so you can just implement the link in your .html like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&quot;#&quot; id=&quot;top&quot;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;However, this results in an unsatisfactory effect. After you click on the button, actually you jump to a page with different url (since a ‘#’ is appended):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/beforeclick.png&quot; alt=&quot;banner&quot; /&gt;
+&lt;img src=&quot;/~fzheng/images/afterclick.png&quot; alt=&quot;banner&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Although we are still in the same page, the browser doesn’t think so. 
+When you need to go back to the previous webpage you have visited, you have to click twice on the Back button (the first time just for jumping to the location before you click on the back-to-top button), which is kind of annoying. In contrast, using jQuery function can prevent this problem. You can try the back-to-top button in this page, it won’t lead you to a different url with ‘#’ symbol.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 20 Jul 2015 23:00:00 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/20/backtotop/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/20/backtotop/</guid>
+        
+        
+        <category>web</category>
+        
+      </item>
+    
+      <item>
+        <title>Display a Circular Photo in Webpage</title>
+        <description>&lt;p&gt;Usually an image is rectangular. However, in many cases we need to display an image in circular shape, e.g. a circular profile photo in a personal home page. So how?&lt;/p&gt;
+
+&lt;p&gt;One intuitive solution is to cut a circular area out of the original photo using some image processing software like Photoshop. But there is some more elegant way. Actually, just a single line of CSS code is enough.&lt;/p&gt;
+
+&lt;p&gt;Our tool is ‘border-radius’, which introduces to a rectangular object the effect of border radius, just like what we can see in iOS app icons. Now imagine we increase the border radius of a square shape, until it cover half of a square border. Obviously the square shape finally becomes a circle.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/circlephoto.png&quot; alt=&quot;circlephoto&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now let’s code. Define a class in .css file and let the ‘border-radius’ be 50%:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.yuan { 
+    border-radius:50%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then in the .html where the photo should be placed, include this class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;img class=&quot;yuan&quot; src=&quot;/~fzheng/images/longmao.jpg&quot; width=&quot;80%&quot; height=&quot;80%&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Done! That’s what I’ve done in the banner of this home page:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/banner.png&quot; alt=&quot;banner&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that here the original photo is better to be square. If it is rectangular, the result will be an ellipse.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 20 Jul 2015 09:00:00 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/20/yuanphoto/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/20/yuanphoto/</guid>
+        
+        
+        <category>web</category>
+        
+      </item>
+    
+      <item>
+        <title>英文版 Windows 下 non-Unicode 程序中正常显示汉字</title>
+        <description>
+&lt;p&gt;英文版 Windows 下， non-Unicode 程序（例如Sublime Text 2）中，汉字可能显示异常。比如我的 Sublime Text 2 中每个汉字都只有半个字的显示空间，看起来像右半边被砍掉一样。&lt;/p&gt;
+
+&lt;p&gt;这是因为英文版 Windows 下 non-Unicode 程序的默认显示字体仍是英文。&lt;/p&gt;
+
+&lt;p&gt;所以要解决这个问题，在控制中心的地区和语言设置项里修改就行了。在 Administrative 这个 tab 下，把 Language for non-Unicode programs 从 English 改到 Chinese Simplified 即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/fontwindows.png&quot; alt=&quot;settings&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then enjoy input Chinese in Sublime Text 2!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/st2chi.png&quot; alt=&quot;settings&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 03 Jul 2015 09:46:00 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/03/windows-chinese-font/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/07/03/windows-chinese-font/</guid>
+        
+        
+        <category>windows</category>
+        
+        <category>font</category>
+        
+        <category>sublime_text</category>
+        
+        <category>电脑</category>
+        
+      </item>
+    
+      <item>
+        <title>沈从文的我执</title>
+        <description>
+&lt;div&gt;
+&lt;center&gt;
+&lt;img src=&quot;http://img6.douban.com/lpic/s6384259.jpg&quot; alt=&quot;从文自传&quot; /&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;在我读来，从文自传没有他的小说那么好。&lt;/p&gt;
+
+&lt;p&gt;文字还是很美，但沈从文字里行间透露出强烈的“我执”。对于逃学贪玩的童年和参军游荡的少年时代，每遇一人，每写一事，都汲汲于强调这些人事给了他怎样的美学的教育，给了他怎样的成长。&lt;/p&gt;
+
+&lt;p&gt;比如写逃学：&lt;/p&gt;
+
+&lt;p&gt;“我一面被处罚跪在房中的一隅，一面便记着各种事情，想象恰如生了一对翅膀，凭经验飞到各样动人事物上去。按照天气寒暖，想到河中的鳜鱼被钓起离水以后拨剌的情形，想到天上飞满风筝的情形，想到空山中歌呼的黄鹂，想到树木上累累的果实。由于最容易神往到种种屋外东西上去，反而常把处罚的痛苦忘掉，处罚的时间忘掉，直到被唤起以后为止，我就从不曾在被处罚中感觉过小小冤屈。那不是冤屈。我应感谢那种处罚，使我无法同自然接近时，给我一个练习想象的机会。”&lt;/p&gt;
+
+&lt;p&gt;写混军队的日子：&lt;/p&gt;
+
+&lt;p&gt;“我们虽各在收入最少卑微的位置上作事，却生活得十分健康。有时即或胡闹，把所有点点钱完全花到一些最可笑事情方面去，生活也仍然是健康的。我们不大关心钱的用处，为的是我们正在生活，有许多生活，本来只需我们用身心去接近，去经验，却不必用一笔钱或一本书来作居间介绍。”&lt;/p&gt;
+
+&lt;p&gt;“凡是我问他的，他无事不回答得使我十分满意。我从他那里学习了一课古怪的学程。从他口上知道烧房子，杀人……种种犯罪的纪录，且从他那种爽直说明中了解那些行为背后所隐伏的生命意识。我从他那儿明白所谓罪恶，且知道这些罪恶如何为社会所不容，却也如何培养着这个坚实强悍的灵魂。”&lt;/p&gt;
+
+&lt;p&gt;这些当然可以解读成心态豁达。但反反复复地陈述和强调，给我的感觉却仿佛是在向读者辩白，生怕读者看低贫穷出身的自己，要向所有人证明，你看我即使过的是这样的生活，但是我的出身、我的童年少年生活的所有的一切都是有价值有意义的（甚至可能比你们城市出身的孩子的过往生活有意思有意义得多）。&lt;/p&gt;
+
+&lt;p&gt;我为什么会这么想，大概我潜意识也有过这样的想法，所以作了诛心之论。猜想对错且不论，我算作是自我提醒，要克服和俯视自己，不要顾盼自怜。&lt;/p&gt;
+
+&lt;p&gt;贫穷生活当然也有美好处，让人成长，但没必要去美化。湘西是美，但民国间军阀土匪横行，生活并非桃花源。&lt;/p&gt;
+
+&lt;p&gt;沈从文能成长为一代文学家，主要因为自己是天才。&lt;/p&gt;
+
+&lt;p&gt;像《边城》这样的小说，他“无我”了，于是好极了。&lt;/p&gt;
+
+&lt;p&gt;题外话：写自己，汪曾祺的态度还是比他老师沈从文要平和得多。个人还是喜欢汪曾祺多点。&lt;/p&gt;
+
+&lt;p&gt;又一点题外话：这版书编的好，从文自传后尚有解放后沈从文的一些发言稿。从民国间的灵气才华横溢到共和国的老实谨慎，侧面反映沈从文审时度势的机敏，但对比昭然，仍让人顿生沧桑之感。&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=&quot;gray&quot;&gt;First published in: &lt;/font&gt; &lt;a href=&quot;http://book.douban.com/review/7440998/&quot;&gt;豆瓣&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 11 Apr 2015 23:53:41 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/04/11/shencongwendewozhi/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/04/11/shencongwendewozhi/</guid>
+        
+        
+        <category>杂谈</category>
+        
+        <category>读书</category>
+        
+      </item>
+    
+      <item>
+        <title>PUMA 560 Simulation</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#download-code&quot; id=&quot;markdown-toc-download-code&quot;&gt;Download Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#detailed-report&quot; id=&quot;markdown-toc-detailed-report&quot;&gt;Detailed Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;download-code&quot;&gt;Download Code&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/izhengfan/Puma560Simulation&quot;&gt;Click here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;detailed-report&quot;&gt;Detailed Report&lt;/h3&gt;
+
+&lt;p&gt;Detailed report available as &lt;a href=&quot;/~fzheng/files/pumareport.pdf&quot;&gt;pdf file&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This project is to derive programs for simulation of inverse dynamics and control based on the model of PUMA 560 manipulator, with the last 3 joints neglected.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/puma.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Apr 2015 23:53:41 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/04/07/puma560/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/04/07/puma560/</guid>
+        
+        
+        <category>robotics</category>
+        
+      </item>
+    
+      <item>
+        <title>姐姐</title>
+        <description>
+&lt;div&gt;
+&lt;center&gt;
+&lt;img src=&quot;/~fzheng/images/jiejie.jpg&quot; alt=&quot;姐姐&quot; /&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;一上午读完沈书枝的&lt;a href=&quot;http://read.douban.com/ebook/7396848/&quot;&gt;《姐姐》&lt;/a&gt;。对农村社会细微的人情世故、对家境窘迫产生的不安和敏感、对乡野风物和生活在孩童感官下的美好体验、对从乡村小世界到城镇大世界的转变中的随波逐流感，我都感同身受。&lt;/p&gt;
+
+&lt;p&gt;比如作者写父母因为生了五个女儿不受亲戚待见，如去小姑家拜年，“她给三姑家的表弟表妹每人五块钱压岁钱，端端正正包在红纸里，回头见我和妹妹也站在房门外，于是给我们一人一块钱。这区分使我们彼此都感到一种微妙的尴尬，好在我们谁也没说什么。”使我想起母亲以前因为父亲工作不好又不擅经营人情关系而在亲戚中受的委屈，那时我也常“ 感到一种微妙的尴尬，好在我们谁也没说什么”。&lt;/p&gt;
+
+&lt;p&gt;又比如作者和双胞胎妹妹读初中住校，每周两人一共十块生活费，先豁出去花一块多吃了顿好吃的肉包子，再精打细算过完一周，使我想起初中住校时每周三十块，省着钱隔几周买一包雀巢奶粉的旧事。&lt;/p&gt;
+
+&lt;p&gt;又比如写火腿肠，“火腿肠在城市流行起来时，她也曾带过几根回来给我们尝新。她自己也没有吃过，我们怀着庄重的心情，用菜刀把火腿肠切开，拈一片到嘴里，几乎就要忍不住吐出来：这是什么奇怪味道？猪肉也不像猪肉，面粉也不像面粉，还一股怪气味。我们猜想也许是吃法不对，做饭时就把一碗火腿肠放在饭锅头上蒸蒸，还是都不能下箸。那碗火腿肠最后只好倒掉了。”以前家里也是这么对待我们见过的第一包火腿肠（不过我们是用煎的），观感也是这货一点都不好吃，读到这段忍俊不禁。&lt;/p&gt;
+
+&lt;p&gt;乡村的人情泥淖和物质精神的双重贫穷，不是那么容易逃出来的。作者的幸运在于父母，父亲坚决让女儿考大学，作者两个姐姐读了三年初中仍考不上重点高中，也要去读卫校。我的幸运也在于开明的父母，母亲的坚强和父亲的豁达；以及，我对从小到大照顾过我的老师，甚至对读过的每一本书的作者都存一份感恩的敬意。如果不读书，过个贩夫走卒打工仔的生活也许有另外一种幸福，但我显然更喜欢现在的生活。&lt;/p&gt;
+
+&lt;p&gt;说起熊亲戚们，现在每次和家里电话，母亲会和我吐槽亲戚（大概她只有对我能吐槽这些），我通常静静听，然后报以更汹涌的吐槽，然后开始诅咒潮汕乡村烦人的人情礼节，母亲在电话那头听得乐呵呵，大概想不到她多年在外的儿子怎么会比她吐槽得更厉害吧哈哈哈。&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=&quot;gray&quot;&gt;First published in: &lt;/font&gt;&lt;a href=&quot;http://www.douban.com/note/491254119/&quot;&gt;豆瓣&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 29 Mar 2015 16:31:28 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/03/29/jiejie/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/03/29/jiejie/</guid>
+        
+        
+        <category>杂谈</category>
+        
+        <category>读书</category>
+        
+      </item>
+    
+      <item>
+        <title>Optical Flow Estimation With Horn-Schunck Method</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#download-code&quot; id=&quot;markdown-toc-download-code&quot;&gt;Download Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#horn-schunck-method&quot; id=&quot;markdown-toc-horn-schunck-method&quot;&gt;Horn-Schunck Method&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#variational-framework&quot; id=&quot;markdown-toc-variational-framework&quot;&gt;Variational Framework&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#optimization&quot; id=&quot;markdown-toc-optimization&quot;&gt;Optimization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#evaluation&quot; id=&quot;markdown-toc-evaluation&quot;&gt;Evaluation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#algorithm-flowchart&quot; id=&quot;markdown-toc-algorithm-flowchart&quot;&gt;Algorithm Flowchart&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#experimental-results&quot; id=&quot;markdown-toc-experimental-results&quot;&gt;Experimental Results&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;download-code&quot;&gt;Download Code&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/izhengfan/opticalflow&quot;&gt;Click here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Estimating the motion of every pixel in a sequence of images is a problem with many applications in computer vision, such as image segmentation, object classification, and driver assistance.&lt;/p&gt;
+
+&lt;p&gt;In general, optical flow describes a dense vector field, where a displacement vector is assigned to each pixel, which points to where that pixel can be found in another image. An example is shown as below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/cvproject/floweg.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This project is a solution for Assignment 3 Optical Flow Estimation of the course Image Processing and Computer Vision (ENGG 5104, CUHK, 2015 Spring). In this project, I implement an algorithm solving the optical flow map (u,v) between two image frames using Horn-Schunck Method.&lt;/p&gt;
+
+&lt;h3 id=&quot;horn-schunck-method&quot;&gt;Horn-Schunck Method&lt;/h3&gt;
+
+&lt;p&gt;Horn-Schunck method is a classical optical flow estimation algorithm. It assumes smoothness in the flow over the whole image. Thus, it tries to minimize distortions in flow and prefers solutions which show more smoothness. In this assignment, we will implement the modern version of Horn-Schunck method, using pyramid-based coarse-to-fine scheme to achieve better performance, similar to that of Lucas-Kanade method. Many current optical flow algorithms are built upon its framework.&lt;/p&gt;
+
+&lt;p&gt;The objective is formulated as a global energy functional which is then minimized. Let the image be p = (x,y) and the underlying flow field be w(p) = (u(p),v(p), 1), where u(p) and v(p) are the horizontal and vertical components of the flow field, respectively. Under the brightness constancy assumption, the pixel value should be consistent along the flow vector, and the flow field should be piecewise smooth. This results in an objective function in the continuous spatial domain&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/eq1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where ∇ is the gradient operator, λ weights the regularization, I1 and I2 are two corresponding images.&lt;/p&gt;
+
+&lt;h3 id=&quot;variational-framework&quot;&gt;Variational Framework&lt;/h3&gt;
+
+&lt;p&gt;To solve Eq. (1), we use an iterative flow framework. It assumes that an estimate of the flow field is w, and one needs to estimate the best increment dw(dw=(du,dv)), to update w. The objective function in Eq. (1) is then changed to&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/eq2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/eq3.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With first-order Taylor expansion:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/eq4.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the above equation we add variable p into du and dv to index du and dv in images.&lt;/p&gt;
+
+&lt;p&gt;For easy computation, we vectorize u, v, du, dv into U, V, dU, dV, and Dx, Dy to denote derivative filters in x and y direction. The continuous function E(du,dv)in Eq. (2) can be discretized as E(dU,dV).&lt;/p&gt;
+
+&lt;h3 id=&quot;optimization&quot;&gt;Optimization&lt;/h3&gt;
+
+&lt;p&gt;The main idea to solve the above equation is to find dU,dV so that the gradient&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/cvproject/eq5.jpg&quot; width=&quot;20%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can derive&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/eq6.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;L is a Laplacian filter defined as&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/eq7.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The term of dU in gradient is derived similarly. Therefore, solving the gradient equation can be performed in the following linear system&lt;/p&gt;
+
+&lt;p&gt; &lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/eq8.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h3&gt;
+
+&lt;p&gt;Having built the pyramids and solve Eq. (8) in each level iteratively, the result in the finest level is obtained. We evaluate optical flow results by two measures: Average Angle Error (AAE) and End Point Error (EPE). They are defined by comparing flow result with the ground truth flow. The lower the AAE and EPE are, the better the optical flow performance is. Also we can visually estimate your result from visualization of the flow map (using flowToColor function).&lt;/p&gt;
+
+&lt;h3 id=&quot;algorithm-flowchart&quot;&gt;Algorithm Flowchart&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Input: frame1,frame2,λ
+Build image pyramid;
+Initialize flow = 0;
+For i= numPyramidLevel:1
+   Initialize flow from previous level;
+   Build gradient matrix and Laplacian matrix;
+   For j=1:maxWarpingNum
+      Warp image using flow vector;
+      Compute image gradient Ix, Iy, and Iz;
+      Build linear system to solve HS flow;
+      Solve linear system to compute the flow;
+      Use median filter to smooth the flow map;
+    EndFor
+EndFor
+Output: flow
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;experimental-results&quot;&gt;Experimental Results&lt;/h3&gt;
+
+&lt;p&gt;For experimental process, refer to my &lt;a href=&quot;https://github.com/izhengfan/opticalflow&quot;&gt;Github project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Five pairs of images are tested, the results as execution time are shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/cvproject/Grove2.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/Grove2time.jpg&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Evaluation measure of picture above: AAE 9.669 average EPE 1.010.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/cvproject/Hydrangea.jpg&quot; width=&quot;100%&quot; /&gt;&lt;p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/Hydrangeatime.jpg&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+Evaluation measure of picture above: AAE 4.901 average EPE 0.456.&lt;br /&gt;&lt;br /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/cvproject/RubberWhale.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/RubberWhaletime.jpg&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+Evaluation measure of picture above: AAE 9.812 average EPE 0.297.&lt;br /&gt;&lt;br /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/cvproject/Dimetrodon.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/Dimetrodontime.jpg&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+Evaluation measure of picture above: AAE 4.673 average EPE 0.250.&lt;br /&gt;&lt;br /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/cvproject/Urban3.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/cvproject/Urban3time.jpg&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+Evaluation measure of picture above: AAE 12.257 average EPE 1.312.&lt;br /&gt;&lt;br /&gt;
+
+
+Some regions in the image groups with visible changes are circled to show that the Warped Image is more similar to frame 1 than frame 2, which indicates that the estimated optical flow is considerately accurate, since the the Warped Image representing frame2 warped to frame1 accroding to the estimated optical flow.
+&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Mar 2015 23:53:41 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/03/25/optical-flow/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/03/25/optical-flow/</guid>
+        
+        
+        <category>computer_vision</category>
+        
+      </item>
+    
+      <item>
+        <title>Automatic Panoramic Mosaic Stitching</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#download-code&quot; id=&quot;markdown-toc-download-code&quot;&gt;Download Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#basic-algorithm&quot; id=&quot;markdown-toc-basic-algorithm&quot;&gt;Basic Algorithm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-1-radial-distortion-correction&quot; id=&quot;markdown-toc-step-1-radial-distortion-correction&quot;&gt;STEP 1. Radial Distortion Correction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-2-distinctive-feature-extraction&quot; id=&quot;markdown-toc-step-2-distinctive-feature-extraction&quot;&gt;STEP 2. Distinctive Feature Extraction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-3-pairwise-alignment&quot; id=&quot;markdown-toc-step-3-pairwise-alignment&quot;&gt;STEP 3. Pairwise Alignment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-4-global-align-and-stitching&quot; id=&quot;markdown-toc-step-4-global-align-and-stitching&quot;&gt;STEP 4. Global Align and Stitching&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-5-spherical-coordinates-warping-and-final-blending&quot; id=&quot;markdown-toc-step-5-spherical-coordinates-warping-and-final-blending&quot;&gt;STEP 5. Spherical Coordinates Warping and Final Blending&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#experimental-results&quot; id=&quot;markdown-toc-experimental-results&quot;&gt;Experimental Results&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;download-code&quot;&gt;Download Code&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/izhengfan/panorama&quot;&gt;Click here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;A panorama, is some wide-angle view of a physical space in a photograph.&lt;/p&gt;
+
+&lt;p&gt;In general, optical flow describes a dense vector field, where a displacement vector is assigned to each pixel, which points to where that pixel can be found in another image. An example is shown as below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/panorama.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This project is a solution for Assignment 2 Automatic Panoramic Mosaic Stitching of the course Image Processing and Computer Vision (ENGG 5104, CUHK, 2015 Spring). In this project, I implement an algorithm for aligning several photos and stitching them into a seamless panorama.&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-algorithm&quot;&gt;Basic Algorithm&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Correct radial distortion in each image;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Extract distinctive features for each image;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Align input images pairwisely;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Automatically stitch images, i.e. compute the transformation matrix for each image to the final panorama;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Warp the images and stitch them into the final panorama.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;step-1-radial-distortion-correction&quot;&gt;STEP 1. Radial Distortion Correction&lt;/h3&gt;
+
+&lt;p&gt;(Related file: WarpSpherical.cpp; Related routine: WarpRDField.)&lt;/p&gt;
+
+&lt;p&gt;The photo captured by cameras may have radial distortion. The simplified model of radial distortion is&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/eq1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where x’n and y’n are normalized image coordinates, i.e.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/eq1_p0.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/eq1_p1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The distorted image coordinates are&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/eq2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apply inverse mapping of this model to obtain undistorted images.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-distinctive-feature-extraction&quot;&gt;STEP 2. Distinctive Feature Extraction&lt;/h3&gt;
+
+&lt;p&gt;SIFT is adopted here. Refer to &lt;a href=&quot;http://www.cs.ubc.ca/~lowe/keypoints/&quot;&gt;SIFT&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3-pairwise-alignment&quot;&gt;STEP 3. Pairwise Alignment&lt;/h3&gt;
+
+&lt;p&gt;(Related files: FeatureMatch.cpp, FeatureAlign.cpp; Related routines: FeatureMatchByDistRatio, alignPair, countInliers, and leastSquaresFit.)&lt;/p&gt;
+
+&lt;p&gt;This part is to compute the transform from image i to image j for each pair (i, j).&lt;/p&gt;
+
+&lt;p&gt;First of all, find matching feature points (in image j to image i). The intial matching is decided using Euclidean distance. For each feature point descriptor in image i, compute the its Euclidean distance to every feature point descriptor in image j. If the ratio between the distance of the nearest neighbor and the second nearest neighbor is less than some threshold r, the feature point is regarded as distinctive; otherwise the feature point will not be used. Note that the distinctiveness is critical for images with repeated patterns such as textures.&lt;/p&gt;
+
+&lt;p&gt;Then RANSAC algorithm is used to find the transform. RANSAC is an iterative algorithm. In each iteration, it randomly selects two pairs of matching points and compute the transformation matrix. With this tranformation matrix, compute how many items in all matching points fit the transform model within a given tolarence, and keep the inliers and inlier number of this iteration. After a given nubmer of iterations, pick the iteration with largest number of inliers, whose transform model and corresponding inliers are accepted. Finally, the full homography is then estimated by these inliners using.&lt;/p&gt;
+
+&lt;p&gt;Here is a vedio illustrating RANSAC vividly:&lt;/p&gt;
+
+&lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;&lt;iframe width=&quot;100%&quot; src=&quot;https://www.youtube.com/embed/1YNjMxxXO-E&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-4-global-align-and-stitching&quot;&gt;STEP 4. Global Align and Stitching&lt;/h3&gt;
+
+&lt;p&gt;(Related file: GlobalAlign.cpp; Related routine: initGlobalAlign.)&lt;/p&gt;
+
+&lt;p&gt;This part involves how to transform all the images to a common plane.&lt;/p&gt;
+
+&lt;p&gt;First, only the good matchings between images are kept. Then the matchings are sorted by their strength (i.e. the number of inliers). After that, the images are added according to the next strongest match (and other relevant matches) to current stitch and perform global alignment every time.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-5-spherical-coordinates-warping-and-final-blending&quot;&gt;STEP 5. Spherical Coordinates Warping and Final Blending&lt;/h3&gt;
+
+&lt;p&gt;(Related files: WarpSpherical.cpp, BlendImages.cpp; Related routines: WarpSphericalField, BlendImages, AccumulateBlend, NormalizeBlend.)&lt;/p&gt;
+
+&lt;p&gt;From the point of view of camera, a large nubmer of images can be considered to be taken in the sphere center from different orientation of a sphere. This part executes blending useing inverse mapping of spherical coordinates warping. The correspondence of each pixel in the panorama is searched for each image. The computation is: for a pixel in the panorama (xsph, ysph),&lt;/p&gt;
+
+&lt;div class=&quot;row&quot; id=&quot;rowimg&quot;&gt;
+    &lt;div class=&quot;col-sm-3&quot; id=&quot;illuwd&quot;&gt;
+        &lt;img src=&quot;/~fzheng/images/eq4.jpg&quot; width=&quot;100%&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-4&quot; id=&quot;inimg&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-5&quot; id=&quot;inimg&quot;&gt;
+        &lt;img src=&quot;/~fzheng/images/sphere.jpg&quot; width=&quot;100%&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;experimental-results&quot;&gt;Experimental Results&lt;/h3&gt;
+
+&lt;p&gt;For experimental process, refer to my &lt;a href=&quot;https://github.com/izhengfan/panorama&quot;&gt;Github project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The input images are:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/inputimg.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After executing my algorithm, the output image is:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/~fzheng/images/panorama.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 11 Mar 2015 23:53:41 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/03/11/panaroma/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2015/03/11/panaroma/</guid>
+        
+        
+        <category>computer_vision</category>
+        
+      </item>
+    
+      <item>
+        <title>ZJUDANCER: Humanoid Football Player Robot</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#our-team&quot; id=&quot;markdown-toc-our-team&quot;&gt;Our Team&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#our-robots-mechanical-design&quot; id=&quot;markdown-toc-our-robots-mechanical-design&quot;&gt;Our Robots: Mechanical Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#selected-game&quot; id=&quot;markdown-toc-selected-game&quot;&gt;Selected Game&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;our-team&quot;&gt;Our Team&lt;/h3&gt;
+
+&lt;p&gt;The robots developed by ZJUDancer for RoboCup are fully autonomous humanoid robots which play different parts as a team in the football game. During the past few years, we won the champions of RoboCup China Open through 2007 to 2014, and advanced to quarter-finals in Robocup 2009 Graz, Robocup 2010 Singapore, Robocup 2011 Istanbul and Robocup 2014 Brazil, to semi-final in Robocup 2012 Mexico, and won third place in Robocup 2013 Netherlands.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/dancerteam.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;our-robots-mechanical-design&quot;&gt;Our Robots: Mechanical Design&lt;/h3&gt;
+
+&lt;p&gt;The whole hardware configuration of our robots are independently designed. Currently ZJUDANCER robot has evoluted to 4th generation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;/~fzheng/images/dancer.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nlict.zju.edu.cn/zjudancer/robots.html&quot;&gt;Click here&lt;/a&gt; to view more about our robot’s evolution.&lt;/p&gt;
+
+&lt;h3 id=&quot;selected-game&quot;&gt;Selected Game&lt;/h3&gt;
+
+&lt;p&gt;In Robocup2013 Netherlands, we (red) met CITBrains kid (blue) in the 3-4 final and won the game finally.&lt;/p&gt;
+
+&lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube.com/embed/AyXuNiPpCmk&quot; width=&quot;100%&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;br /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nlict.zju.edu.cn/zjudancer/index.html&quot;&gt;Click here&lt;/a&gt; to view more about our team.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/user/ZJUDancer&quot;&gt;Click here&lt;/a&gt; to watch us on YouTube.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 31 Jul 2014 16:31:28 +0000</pubDate>
+        <link>http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2014/07/31/zjudancer/</link>
+        <guid isPermaLink="true">http://www.mae.cuhk.edu.hk/~fzheng/~fzheng/2014/07/31/zjudancer/</guid>
+        
+        
+        <category>robotics</category>
+        
+      </item>
+    
+  </channel>
+</rss>

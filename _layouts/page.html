@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class="row">
+    <div class="col-sm-1">
+      <div id="left-bar">
+        <p><a href="{{ site.baseurl }}/">Home</a></p>
+          {% if page.url == "/blog/" %}
+            {% else %}
+          {% endif %}
+            <!--<a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-th-large"></span>Blog</a></li>-->
+            <p><a href="{{ site.baseurl }}/blog/">Blog</a></p>
+  
+          {% for p in site.pages %}
+            {% if p.title %}
+              {% if p.url == page.url %}
+                {% else %}
+              {% endif %}
+              <p><a href="{{ p.url | prepend: site.baseurl }}"> {{ p.title }}</a></p>
+            {% endif %}
+          {% endfor %}
+      </div>
+    </div>
+
+  <div  class="col-sm-8 col-sm-offset-1">
+	 <div class="post-area post">
+	    <article class="page-content">
+        {{ content }}
+	    </article>
+	 </div>
+  </div>
+</div>	
