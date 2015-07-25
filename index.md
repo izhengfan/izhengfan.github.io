@@ -2,6 +2,15 @@
 layout: page
 ---
 
+<div>
+	<center>
+	<img class="yuan" src="{{ site.baseurl }}/images/longmao.jpg"><img>
+	</center>
+</div>
+
+<br><br>
+
+
 ### ZHENG Fan 郑帆 
 
 <p>About me <a href="{{ site.baseurl }}/about/">>>></a></p>
