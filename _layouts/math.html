@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<header>
+<h2>{{ page.title }}</h2>
+<p><i>{{ page.date | date: "%b %-d, %Y" }}</i>{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+</header>
+<article>
+{{content}}
+</article>
+<div id="info-bottom">
+<hr>    
+<p>Tags: {% for tag in page.tags %}<block class="tag"><a href="/archive/#{{tag}}">{{ tag }}</a></block>{% endfor %}</p>
+<p><b>Comment</b> by <a href="https://github.com/izhengfan/izhengfan.github.io/issues"> Github Issues </a></p>
+<p><b>Chat</b> in <a href="https://gitter.im/fan-farm/Lobby">Gitter/fan-farm</a> </p>
+</div>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}, 
+  "HTML-CSS": {
+    availableFonts: ["STIX","TeX"],
+    preferredFont: "STIX",
+    webFont: "STIX-Web"
+  }});
+</script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

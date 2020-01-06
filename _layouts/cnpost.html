@@ -1,0 +1,16 @@
+---
+layout: cndefault
+---
+<header>
+<h2>{{ page.title }}</h2>
+<p><i>{{ page.date | date: "%Y-%m-%d" }}</i>{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+</header>
+<article>
+{{content}}
+</article>
+<div id="info-bottom">
+<hr>
+<p>标签: {% for tag in page.tags %}<block class="tag"><a href="/cnarchive/#{{tag}}">{{ tag }}</a></block>{% endfor %}</p>
+<p><b>留言</b>请用 <a href="https://github.com/izhengfan/izhengfan.github.io/issues"> Github Issues </a></p>
+<p><b>聊天</b>请在 <a href="https://gitter.im/fan-farm/Lobby">Gitter/fan-farm</a> </p>
+</div>
