@@ -59,7 +59,8 @@ g++ -g helloworld.cpp -o helloworld
 其中， GDB 窗口提供 GDB 原生操作；程序窗口供被调试程序使用，提供 IO 功能；源码窗口提供源码交互。
 在 GUI 版本的 Vim （如 gvim）中，源码窗口还提供交互按钮：
 
-![](https://user-images.githubusercontent.com/8697363/40467705-75d69b9e-5f5d-11e8-8f34-8f2345b9c735.png)
+<!-- ![vimtermdebug](https://ftp.bmp.ovh/imgs/2020/01/507a93d5c570dfc9.png) -->
+![vimtermdebug](https://s2.ax1x.com/2020/01/07/lc2Dw8.png)
 
 我们可以通过 `<Ctrl-W>` 按键切换不同窗口。
 
