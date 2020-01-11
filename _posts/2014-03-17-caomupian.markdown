@@ -20,12 +20,18 @@ __目录__
 ### 玉兰
 
 <p>（1）首先是我倾心的木兰科。<b>玉兰</b>，又称白玉兰、望春，木兰科木兰属。花期无叶，满眼洁白。此时开得正盛，紫金港和玉泉随处可见。参考：<a href="http://frps.eflora.cn/frps/%E7%8E%89%E5%85%B0">中国植物志·玉兰</a>。</p>
-<p><img  src="/images/yulan.jpg"></p>
+<p>
+<!-- <img src = 'https://ftp.bmp.ovh/imgs/2020/01/bd36cca67b32711e.jpg' /> -->
+<img src="https://s2.ax1x.com/2020/01/11/l5PQnU.md.jpg" alt="l5PQnU.jpg" >
+</p>
 
 ### 紫花玉兰
 
 <p>（2）<b>紫花玉兰</b>。玉兰的一个栽培变种。花表面紫红色，里面淡红白色。花期4月。此时应是含苞待放。</p>
-<p><img  src="/images/zihua.jpg"></p>
+<p>
+<!-- <img src = 'https://ftp.bmp.ovh/imgs/2020/01/eac86b7a04165d6b.jpg' /> -->
+<img src="https://s2.ax1x.com/2020/01/11/l5PwnO.jpg" alt="l5PwnO.jpg" />
+</p>
 <p>亦有朋友认为配图中为红运玉兰，二乔木兰的一个变种。经查，红运玉兰一年开花2-3次，印象中紫金港这种木兰一年只开一次。个人认为更可能是紫花玉兰。参考： <a href="http://blog.sina.com.cn/s/blog_61d7a7bb0100fmjg.html">新浪博客·玉兰VS紫花玉兰VS飞黄玉兰，筑龙园林景观·红运玉兰。</a></p>
 <p>当然木兰科植物经过无数人工引种栽培，种类繁杂，新品种又不断涌现，实在很难确认品类。「贵圈真乱」。</p>
 <p>可以肯定此花不是辛夷。辛夷，又称紫玉兰、木兰、木笔、望春，木兰科木兰属。树较大，高2-3米，生于海拔300-1600米的山坡林缘。参考：<a href="http://frps.eflora.cn/frps/Magnolia%20liliflora">中国植物志·紫玉兰</a>。</p>
@@ -35,34 +41,52 @@ __目录__
 ### 二乔
 
 <p>（3）<b>二乔</b>，状如玉兰，粉色，木兰科木兰属。为玉兰和辛夷杂交种。此时应是半开放。参考：<a href="http://frps.eflora.cn/frps/Magnolia%20soulangeana">中国植物志·二乔木兰</a>。</p>
-<p><img  src="/images/erqiao.jpg"></p>
+<p>
+<!-- <img src = 'https://ftp.bmp.ovh/imgs/2020/01/e19bc937c9c894ee.jpg' /> -->
+<img src="https://s2.ax1x.com/2020/01/11/l5PBHe.jpg" alt="l5PBHe.jpg" />
+</p>
 <p>二乔这个名字不知谁创，爱极。东风不与周郎便，铜雀春深锁二乔。</p>
 <p>小结：木兰科木兰属在紫金港常见的不外三种：白色为木兰，最早开放；粉色为二乔，花期稍慢；紫色为紫花玉兰，花期最晚。</p>
 
 ### 含笑
 
 <p>（4）<b>含笑</b>，又称含笑美、含笑梅、山节子、白兰花、唐黄心树、香蕉花，木兰科含笑属。色乳白带黄，花瓣比玉兰厚，不如玉兰晶莹剔透。叶浓绿。有幽香。花期以夏为盛。</p>
-<p><img  src="/images/hanxiao.jpg"></p>
+<p>
+<!-- <img src = 'https://ftp.bmp.ovh/imgs/2020/01/f4033e28c6ccb740.jpg' /> -->
+<img src="https://s2.ax1x.com/2020/01/11/l5P2gP.jpg" alt="l5P2gP.jpg"/>
+</p>
 <p>含笑之名亦不知谁创，真美。</p>
 
 
 ### 白兰
 
 <p>（5）<b>白兰</b>，又称白缅花、白兰花、缅桂花、天女木兰，南方也有称白玉兰的。花色洁白。花瘦叶硕，香气清幽。花期以夏为盛。岭南较多，潮汕常见有老妇采摘，摆放在室内或夹在耳上。</p>
-<p><img  src="/images/bailan.jpg"></p>
+<p>
+<!-- <img src = 'https://ftp.bmp.ovh/imgs/2020/01/1db57643cd80b0e0.jpg' /> -->
+<img src="https://s2.ax1x.com/2020/01/11/l5PIEQ.jpg" alt="l5PIEQ.jpg" />
+</p>
 
 
 ### 杜鹃花
 
 <p>（6）<b>杜鹃花</b>，又称山石榴、映山红。太常见了。花色艳丽。</p>
-<p><img  src="/images/dujuan.jpg"></p>
+<p>
+<!-- <img src = 'https://ftp.bmp.ovh/imgs/2020/01/79e4eb642a0b6dea.jpg' /> -->
+<img src="https://s2.ax1x.com/2020/01/11/l5Pqg0.jpg" alt="l5Pqg0.jpg" />
+</p>
 <p>白居易：「闲折二枝持在手，细看不似人间有，花中此物是西施，鞭蓉芍药皆嫫母」。个人对杜鹃花并不特别倾心。白居易对花貌似很博爱，据说他对妹子也是如此。</p>
 
 ### 山茶花
 
 <p>（7）<b>山茶花</b>。又称茶花、曼陀罗，古时有别名海石榴、玉茗花、耐冬等，山茶科山茶属。很常见。白、粉、红诸色都有。山茶确有别名为曼陀罗树，但平常讲的曼陀罗并不是山茶，而是另一种茄科植物。参考： <a href="http://frps.eflora.cn/frps/%E6%9B%BC%E9%99%80%E7%BD%97">中国植物志·山茶，中国植物志·曼陀罗</a>。</p>
-<p><img  src="/images/hongshancha.jpg"></p>
-<p><img  src="/images/baishancha.jpg"></p>
+<p>
+<img src="https://s2.ax1x.com/2020/01/11/l5PzE4.jpg" alt="l5PzE4.jpg" />
+<!-- <img src = 'https://ftp.bmp.ovh/imgs/2020/01/cd289f4f5f2438c6.jpg' /> -->
+</p>
+<p>
+<!-- <img src = 'https://ftp.bmp.ovh/imgs/2020/01/d15409245b7ae9cb.jpg' /> -->
+<img src="https://s2.ax1x.com/2020/01/11/l5iEDO.md.jpg" alt="l5iEDO.jpg" />
+</p>
 
 ### 金钟花
 
