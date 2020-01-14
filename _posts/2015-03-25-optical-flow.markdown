@@ -18,7 +18,7 @@ Estimating the motion of every pixel in a sequence of images is a problem with m
 
 In general, optical flow describes a dense vector field, where a displacement vector is assigned to each pixel, which points to where that pixel can be found in another image. An example is shown as below.
 
-<p><img src="/images/cvproject/floweg.jpg"  ></p>
+![l5qMbq.md.jpg](https://s2.ax1x.com/2020/01/11/l5qMbq.md.jpg)
 
 This project is a solution for Assignment 3 Optical Flow Estimation of the course Image Processing and Computer Vision (ENGG 5104, CUHK, 2015 Spring). In this project, I implement an algorithm solving the optical flow map (u,v) between two image frames using Horn-Schunck Method.
 
@@ -28,7 +28,9 @@ Horn-Schunck method is a classical optical flow estimation algorithm. It assumes
 
 The objective is formulated as a global energy functional which is then minimized. Let the image be p = (x,y) and the underlying flow field be w(p) = (u(p),v(p), 1), where u(p) and v(p) are the horizontal and vertical components of the flow field, respectively. Under the brightness constancy assumption, the pixel value should be consistent along the flow vector, and the flow field should be piecewise smooth. This results in an objective function in the continuous spatial domain
 
-<p><img  src="/images/cvproject/eq1.jpg"></p>
+![l57TG4.jpg](https://s2.ax1x.com/2020/01/11/l57TG4.jpg)
+<!-- <p><img  src="/images/cvproject/eq1.jpg"></p> -->
+
 
 where ∇ is the gradient operator, λ weights the regularization, I1 and I2 are two corresponding images.
 
@@ -36,15 +38,18 @@ where ∇ is the gradient operator, λ weights the regularization, I1 and I2 are
 
 To solve Eq. (1), we use an iterative flow framework. It assumes that an estimate of the flow field is w, and one needs to estimate the best increment dw(dw=(du,dv)), to update w. The objective function in Eq. (1) is then changed to
 
-<p><img  src="/images/cvproject/eq2.jpg"></p>
+![l57Hz9.jpg](https://s2.ax1x.com/2020/01/11/l57Hz9.jpg)
+<!-- <p><img  src="/images/cvproject/eq2.jpg"></p> -->
 
 Let
 
-<p><img  src="/images/cvproject/eq3.jpg"></p>
+![l57Ls1.jpg](https://s2.ax1x.com/2020/01/11/l57Ls1.jpg)
+<!-- <p><img  src="/images/cvproject/eq3.jpg"></p> -->
 
 With first-order Taylor expansion:
 
-<p><img  src="/images/cvproject/eq4.jpg"></p>
+![l577RJ.jpg](https://s2.ax1x.com/2020/01/11/l577RJ.jpg)
+<!-- <p><img  src="/images/cvproject/eq4.jpg"></p> -->
 
 In the above equation we add variable p into du and dv to index du and dv in images.
 
@@ -54,19 +59,23 @@ For easy computation, we vectorize u, v, du, dv into U, V, dU, dV, and Dx, Dy to
 
 The main idea to solve the above equation is to find dU,dV so that the gradient
 
-<p><img src="/images/cvproject/eq5.jpg" width="20%"></p>
+![l575IU.jpg](https://s2.ax1x.com/2020/01/11/l575IU.jpg)
+<!-- <p><img src="/images/cvproject/eq5.jpg" width="20%"></p> -->
 
 We can derive
 
-<p><img  src="/images/cvproject/eq6.jpg"></p>
+![l57Oqx.jpg](https://s2.ax1x.com/2020/01/11/l57Oqx.jpg)
+<!-- <p><img  src="/images/cvproject/eq6.jpg"></p> -->
 
 L is a Laplacian filter defined as
 
-<p><img  src="/images/cvproject/eq7.jpg"></p>
+![l57jZ6.jpg](https://s2.ax1x.com/2020/01/11/l57jZ6.jpg)
+<!-- <p><img  src="/images/cvproject/eq7.jpg"></p> -->
 
 The term of dU in gradient is derived similarly. Therefore, solving the gradient equation can be performed in the following linear system
 
-<p> <img  src="/images/cvproject/eq8.jpg"></p>
+![l57vdK.jpg](https://s2.ax1x.com/2020/01/11/l57vdK.jpg)
+<!-- <p> <img  src="/images/cvproject/eq8.jpg"></p> -->
 
 ### Evaluation
 
@@ -96,31 +105,33 @@ Output: flow
 
 Five pairs of images are tested, the results as execution time are shown below:
 
-<p><img src="/images/cvproject/Grove2.jpg"  ></p>
-<p><center><img  src="/images/cvproject/Grove2time.jpg"></center></p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l570Vf.jpg"  ></p>
+<p><center><img  src="https://s2.ax1x.com/2020/01/11/l57dqP.jpg"></center></p>
 
 Evaluation measure of picture above: AAE 9.669 average EPE 1.010.<br><br>
 
-<p><img src="/images/cvproject/Hydrangea.jpg"  ><p>
-<p><center><img  src="/images/cvproject/Hydrangeatime.jpg"></center></p>
+<p><center>
+<a href="https://imgchr.com/i/l5bVXR"><img src="https://s2.ax1x.com/2020/01/11/l5bVXR.md.jpg" alt="l5bVXR.md.jpg" border="0"></a>
+</center></p>
+<p><center>
+<a href="https://imgchr.com/i/l5bA1J"><img src="https://s2.ax1x.com/2020/01/11/l5bA1J.jpg" alt="l5bA1J.jpg" border="0"></a><center></p>
 
 Evaluation measure of picture above: AAE 4.901 average EPE 0.456.<br><br>
 
-<p><img src="/images/cvproject/RubberWhale.jpg"  ></p>
-<p><center>
-<img  src="/images/cvproject/RubberWhaletime.jpg"></center></p>
+<a href="https://imgchr.com/i/l5bD3Q"><img src="https://s2.ax1x.com/2020/01/11/l5bD3Q.md.jpg" alt="l5bD3Q.md.jpg" border="0"></a>
+<a href="https://imgchr.com/i/l5bw4S"><img src="https://s2.ax1x.com/2020/01/11/l5bw4S.jpg" alt="l5bw4S.jpg" border="0"></a>
 
 Evaluation measure of picture above: AAE 9.812 average EPE 0.297.<br><br>
 
-<p><img src="/images/cvproject/Dimetrodon.jpg"  ></p>
+<a href="https://imgchr.com/i/l5bB9g"><img src="https://s2.ax1x.com/2020/01/11/l5bB9g.md.jpg" alt="l5bB9g.md.jpg" border="0"></a>
 <p><center>
-<img  src="/images/cvproject/Dimetrodontime.jpg"></center></p>
+<img src="https://s2.ax1x.com/2020/01/11/l5bcBq.jpg" alt="l5bcBq.jpg" border="0" /></center></p>
 
 Evaluation measure of picture above: AAE 4.673 average EPE 0.250.<br><br>
 
-<p><img src="/images/cvproject/Urban3.jpg"  ></p>
+<a href="https://imgchr.com/i/l5b4CF"><img src="https://s2.ax1x.com/2020/01/11/l5b4CF.md.jpg" alt="l5b4CF.md.jpg" border="0"></a>
 <p><center>
-<img  src="/images/cvproject/Urban3time.jpg"></center></p>
+<a href="https://imgchr.com/i/l5bf4U"><img src="https://s2.ax1x.com/2020/01/11/l5bf4U.jpg" alt="l5bf4U.jpg" border="0"></a></center></p>
 
 Evaluation measure of picture above: AAE 12.257 average EPE 1.312.<br><br>
 

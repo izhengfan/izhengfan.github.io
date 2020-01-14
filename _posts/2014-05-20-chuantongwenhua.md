@@ -6,7 +6,7 @@ categories: cn
 tags: 杂谈
 ---
 
-![wenhuaban](/images/wenhuaban.jpg)
+<!-- ![wenhuaban](/images/wenhuaban.jpg) -->
 
 __注：此为在 2014 年浙江大学文化中国班招生宣讲会上的演讲稿。__
 

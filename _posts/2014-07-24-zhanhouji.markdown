@@ -6,7 +6,8 @@ categories: cn
 tags: robotics 杂谈
 ---
 
-![robot](/images/robocup.jpg)
+![lLnYS1.jpg](https://s2.ax1x.com/2020/01/14/lLnYS1.jpg)
+<!-- ![robot](/images/robocup.jpg) -->
 	
 2014年 ROBOCUP 的注册阶段，ZJUDANCER 专门看了几个老对手的 qualification video——BOLD-HEARTS, EROS, AUTMAN, CIT-BRAINS, MRL 等等。一轮看下来，也还好嘛，今年应该也能四强（决赛或者冠军也有可能呀）。恍惚间看到一个叫 BASET 的队伍，咦，这货从哪冒出来的？以前从来没听说过。嗯，所有强队都是至少有几年历史积淀才赢得了 ROBOCUP 的，菜鸟，不看也罢。 
 

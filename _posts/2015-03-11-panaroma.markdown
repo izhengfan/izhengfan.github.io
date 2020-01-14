@@ -17,7 +17,7 @@ __Contents__
 A panorama, is some wide-angle view of a physical space in a photograph.
 
 
-<p><IMG src="/images/panorama.jpg"  ></p>
+[![l5rOtf.md.jpg](https://s2.ax1x.com/2020/01/11/l5rOtf.md.jpg)](https://imgchr.com/i/l5rOtf)
 
 
 This project is a solution for Assignment 2 Automatic Panoramic Mosaic Stitching of the course Image Processing and Computer Vision (ENGG 5104, CUHK, 2015 Spring). In this project, I implement an algorithm for aligning several photos and stitching them into a seamless panorama.
@@ -40,18 +40,17 @@ This project is a solution for Assignment 2 Automatic Panoramic Mosaic Stitching
 
 The photo captured by cameras may have radial distortion. The simplified model of radial distortion is
 
-<p><img src="/images/eq1.jpg"></p>
+![l5sP7q.jpg](https://s2.ax1x.com/2020/01/11/l5sP7q.jpg)
 
 where x'n and y'n are normalized image coordinates, i.e.
 
-<p><IMG src="/images/eq1_p0.jpg"></p>
-<p><IMG src="/images/eq1_p1.jpg"></p>
+![l5sCBn.jpg](https://s2.ax1x.com/2020/01/11/l5sCBn.jpg)
 
+![l5s9ns.jpg](https://s2.ax1x.com/2020/01/11/l5s9ns.jpg)
 
 The distorted image coordinates are
 
-<p><IMG src="/images/eq2.jpg"></p>
-
+![l5sMH1.jpg](https://s2.ax1x.com/2020/01/11/l5sMH1.jpg)
 
 Apply inverse mapping of this model to obtain undistorted images.
 
@@ -70,7 +69,7 @@ First of all, find matching feature points (in image j to image i). The intial m
 
 Then RANSAC algorithm is used to find the transform. RANSAC is an iterative algorithm. In each iteration, it randomly selects two pairs of matching points and compute the transformation matrix. With this tranformation matrix, compute how many items in all matching points fit the transform model within a given tolarence, and keep the inliers and inlier number of this iteration. After a given nubmer of iterations, pick the iteration with largest number of inliers, whose transform model and corresponding inliers are accepted. Finally, the full homography is then estimated by these inliners.
 
-Here is a vedio illustrating RANSAC vividly:
+Here is a YouTube vedio illustrating RANSAC vividly:
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/1YNjMxxXO-E?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
 
@@ -88,14 +87,15 @@ First, only the good matchings between images are kept. Then the matchings are s
 
 From the point of view of camera, a large nubmer of images can be considered to be taken in the sphere center from different orientation of a sphere. This part executes blending useing inverse mapping of spherical coordinates warping. The correspondence of each pixel in the panorama is searched for each image. The computation is: for a pixel in the panorama (xsph, ysph),
 
+
 <div class="row" id="rowimg">
     <div class="col-sm-3" id="illuwd">
-        <img src="/images/eq4.jpg"  >
+        <img src="https://s2.ax1x.com/2020/01/11/l5sYge.jpg"  >
     </div>
     <div class="col-sm-4" id="inimg">
     </div>
     <div class="col-sm-5" id="inimg">
-        <img src="/images/sphere.jpg"  >
+        <img src="https://s2.ax1x.com/2020/01/11/l5sUud.jpg"  >
     </div>
 </div><br>
 
@@ -103,9 +103,9 @@ From the point of view of camera, a large nubmer of images can be considered to 
 
 The input images are:
 
-<p><img src="/images/inputimg.jpg"  ></p>
+[![l5TdNF.md.jpg](https://s2.ax1x.com/2020/01/11/l5TdNF.md.jpg)](https://imgchr.com/i/l5TdNF)
 
 After executing my algorithm, the output image is:
 
-<p><img src="/images/panorama.jpg"></p>
+[![l5rOtf.md.jpg](https://s2.ax1x.com/2020/01/11/l5rOtf.md.jpg)](https://imgchr.com/i/l5rOtf)
 

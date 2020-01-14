@@ -22,4 +22,5 @@ Detailed report available as [pdf file](/files/pumareport.pdf).
 
 This project is to derive programs for simulation of inverse dynamics and control based on the model of PUMA 560 manipulator, with the last 3 joints neglected.
 
-![puma560](/images/puma.jpg)
+![lLnHlq.jpg](https://s2.ax1x.com/2020/01/14/lLnHlq.jpg)
+<!-- ![puma560](/images/puma.jpg) -->

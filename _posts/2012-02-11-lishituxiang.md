@@ -6,7 +6,7 @@ categories: cn
 tags: 读书
 ---
 
-![资治通鉴](/images/zizhitongjian.jpg)
+![资治通鉴](https://s2.ax1x.com/2020/01/11/l5TX4g.jpg)
 
 原题：历史图像与灵心善感——以《资治通鉴》征伐匈奴远通西域事为例
 

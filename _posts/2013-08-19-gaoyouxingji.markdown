@@ -6,7 +6,8 @@ categories: cn
 tags: 旅行 杂谈
 ---
 
-![](/images/gujunei.jpg)
+![](https://pic1.zhimg.com/80/ff9a1ae1d49897e7fbca50e32a1cd359_hd.jpg)
+<!-- ![](/images/gujunei.jpg) -->
 
 高邮距南京两个小时车程。18日上午，我从南京东站坐车前往。
 
@@ -85,58 +86,71 @@ tags: 旅行 杂谈
 于是出门时，又由老人领着，出竺家巷，到人民路，转到傅家桥路。老人边走边和邻居问好，又给我有暖意。物虽贱，未必不美。街口与金先生握手，告别登程。
 
 
-![](/images/renminlu.jpg)
+![](https://pic4.zhimg.com/80/e9d4dfbc8125a55d3b308b8b53ab0316_hd.jpg)
+<!-- ![](/images/renminlu.jpg) -->
 
 人民路
 
-![](/images/danaohe.jpg)
+![](https://pic3.zhimg.com/80/6706e0c21ec0d32f881ab732ba878c55_hd.jpg)
+<!-- ![](/images/danaohe.jpg) -->
 
 大淖河
 
-![](/images/zhujiaxiang.jpg)
-
+![](https://pic2.zhimg.com/80/67556087b92f8c4941f429304b19f548_hd.jpg)
+<!-- ![](/images/zhujiaxiang.jpg) -->
 竺家巷，右侧可见「如意楼」
 
-![](/images/guju.jpg)
+![](https://pic2.zhimg.com/80/a63593c2335bb0054431f4d440530560_hd.jpg)
+<!-- ![](/images/guju.jpg) -->
 
 竺家巷9号汪曾祺故居
 
-![](/images/yunhe.jpg)
+![](https://pic2.zhimg.com/80/bc521b0aa54601d8d5a15ae25a6afa1c_hd.jpg)
+<!-- ![](/images/yunhe.jpg) -->
 
 运河（啊喂竟然还有一群鸭子）
 
-![](/images/zhenguosi.jpg)
+![](https://pic4.zhimg.com/80/857b867f46bbdbd23a1deef1746db67b_hd.jpg)
+<!-- ![](/images/zhenguosi.jpg) -->
 
 渡口对面的镇国寺
 
-![](/images/guanyinxiang.jpg)
+![](https://pic4.zhimg.com/80/2d3d116c6402e33f2de0d117c758555c_hd.jpg)
+<!-- ![](/images/guanyinxiang.jpg) -->
 
 天王殿前的观音像
 
-![](/images/gaoyouhu.jpg)
+![](https://pic4.zhimg.com/80/72c0b7cd171d90b797c0304a4448dad9_hd.jpg)
+<!-- ![](/images/gaoyouhu.jpg) -->
 
 高邮湖
 
-![](/images/puduqiao.jpg)
+![](https://pic3.zhimg.com/80/5a407e0fe11549470f03f9fbab0cae69_hd.jpg)
+<!-- ![](/images/puduqiao.jpg) -->
 
 连接西堤和河心岛的普渡桥
 
-![](/images/zhenguosinei.jpg)
+![](https://pic4.zhimg.com/80/8cd418dae3fa30247423dde2306cfc99_hd.jpg)
+<!-- ![](/images/zhenguosinei.jpg) -->
 
 镇国寺内
 
-![](/images/shuiseng.jpg)
+![](https://pic3.zhimg.com/80/c17c517acaa1f0855115c9e581bb3976_hd.jpg)
+<!-- ![](/images/shuiseng.jpg) -->
 
 大雄宝殿里午睡的僧人
 
-![](/images/xiaqilaoren.jpg)
+![](https://pic1.zhimg.com/80/26c198ce648831965f80a57435b3e985_hd.jpg)
+<!-- ![](/images/xiaqilaoren.jpg) -->
 
 运河边下棋的老人
 
-![](/images/nanmendajie.jpg)
+![](https://pic4.zhimg.com/80/fa2430304560d398209e97b6a2c8a7cc_hd.jpg)
+<!-- ![](/images/nanmendajie.jpg) -->
 
 南门大街
 
-![](/images/gujunei.jpg)
+![](https://pic1.zhimg.com/80/ff9a1ae1d49897e7fbca50e32a1cd359_hd.jpg)
+<!-- ![](/images/gujunei.jpg) -->
 
 汪曾祺故居内

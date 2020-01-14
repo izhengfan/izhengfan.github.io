@@ -12,11 +12,12 @@ tags: Windows type
 
 所以要解决这个问题，在控制中心的地区和语言设置项里修改就行了。在 Administrative 这个 tab 下，把 Language for non-Unicode programs 从 English 改到 Chinese Simplified 即可。
 
-
-![settings](/images/fontwindows.jpg)
+![lLnxk4.jpg](https://s2.ax1x.com/2020/01/14/lLnxk4.jpg)
+<!-- ![settings](/images/fontwindows.jpg) -->
 
 Then enjoy input Chinese in Sublime Text 2!
 
 
-![settings](/images/st2chi.jpg)
+![lLnj7F.jpg](https://s2.ax1x.com/2020/01/14/lLnj7F.jpg)
+<!-- ![settings](/images/st2chi.jpg) -->
 

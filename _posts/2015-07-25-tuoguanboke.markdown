@@ -126,7 +126,8 @@ git checkout gitcafe-pages #切换回日常用的 gitcafe-pages branch
 如果你还注册了个人域名，则要使用域名解析服务，将你的域名指向 Github 和 Gitcafe。这里推荐使用 dnspod 的域名解析服务，免费，同时支持根据访问 IP
 来源设定指向不同的 IP 地址。可设定如果访问来自国外则指向 Github，来自国内则指向 Gitcafe，优化访问速度。比如我的设定：
 
-![dnspod](/images/dnspod.png)
+![lLuiX6.png](https://s2.ax1x.com/2020/01/14/lLuiX6.png)
+<!-- ![dnspod](/images/dnspod.png) -->
 
 第一条指向 Github，第二条指向 Gitcafe。 
 
