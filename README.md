@@ -29,3 +29,5 @@ If you want to use this blog template, please **give a star at the repository**.
 ### Sites using this theme
 
 - https://www.ogura.io/
+
+- https://www.hadronw.com/
