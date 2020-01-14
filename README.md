@@ -25,3 +25,9 @@ If you want to use this blog template, please **give a star at the repository**.
 2015.07 | Launch of my personal domain [fzheng.me](http://fzheng.me).
 2015.07 | Foundation of the blog structure. Also use Github Pages.
 2015.03	| Foundation of my [homepage](https://izhengfan.github.io) maintained in Github Pages.
+
+### Sites using this theme
+
+- https://www.ogura.io/
+
+- https://www.hadronw.com/
