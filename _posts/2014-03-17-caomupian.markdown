@@ -116,7 +116,7 @@ __目录__
 <p>（11）<b>木绣球</b>。最准确的叫法应该是绣球荚蒾。又称八仙花、紫阳花（南京），图拍于西区。</p>
 <p>
 <a href="https://imgchr.com/i/l5B1N8"><img src="https://s2.ax1x.com/2020/01/11/l5B1N8.md.jpg" alt="l5B1N8.md.jpg"></a>
-<img  src="/images/xiuqiu.jpg">
+<!-- <img  src="/images/xiuqiu.jpg"> -->
 </p>
 <p>绣球荚蒾还有一个变种，就是琼花，亦称扬州琼花。参考：<a href="http://frps.eflora.cn/frps/%E7%BB%A3%E7%90%83%E8%8D%9A%E8%92%BE">中国植物志·绣球荚蒾</a>。 </p>
 
