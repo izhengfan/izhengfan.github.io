@@ -28,8 +28,8 @@ $$ {\bf R}=\begin{bmatrix} 1-2q_2^2-2q_3^2 & 2q_1q_2-2q_0q_3 & 2q_1q_3+2q_0q_2 \
 
 Github 上也能看见不少的关于四元数不同 convention 的问题和争论。比如知名的 ETH-ASL 的一个项目下就有这样一个 [issue](https://github.com/ethz-asl/ethzasl_msf/issues/19)：
 
-![](/images/quaternion_convention_issue.png)
-
+<!-- ![](/images/quaternion_convention_issue.png) -->
+![lXOZ8J.png](https://s2.ax1x.com/2020/01/15/lXOZ8J.png)
 
 看起来他们组支持 Hamilton 的比较多。
 

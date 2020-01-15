@@ -28,7 +28,8 @@ Nicolas Rotella also mentioned this problem in his report [\[5\]](http://www-clm
 
 There are also some concerning arguments and discussions in GitHub. One such [issue](https://github.com/ethz-asl/ethzasl_msf/issues/19) from a project of ETH-ASL:
 
-![](/images/quaternion_convention_issue.png)
+<!-- ![](/images/quaternion_convention_issue.png) -->
+![lXOZ8J.png](https://s2.ax1x.com/2020/01/15/lXOZ8J.png)
 
 It seems Hamilton receives more favor from their group.
 

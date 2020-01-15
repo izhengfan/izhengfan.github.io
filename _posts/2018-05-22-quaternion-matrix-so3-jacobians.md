@@ -73,7 +73,8 @@ $$
 
 据 Barfoot [4]，若 $$\boldsymbol\phi$$ 的左雅可比为 $${\bf J}_l({\boldsymbol \phi})$$ ，右雅可比为 $${\bf J}_r({\boldsymbol \phi})$$ ：
 
-![](https://user-images.githubusercontent.com/8697363/40345000-e7081a12-5dc9-11e8-8e00-77d3b3ed3460.png)
+<!-- ![](https://user-images.githubusercontent.com/8697363/40345000-e7081a12-5dc9-11e8-8e00-77d3b3ed3460.png) -->
+![](https://ftp.bmp.ovh/imgs/2020/01/548f0d6f210f62ee.png)
 
 于是，假设有待估计量 __C__，更新方式为 $${\bf C} \leftarrow {\bf C}\, {\rm Exp}({\boldsymbol \alpha})$$ ， $$\boldsymbol \alpha$$ 为 so3 小量。假定有 __C__ 的测量量 $$\bf\tilde C$$，定义误差函数 $${\bf e}_{\rm lie}$$ ：
 

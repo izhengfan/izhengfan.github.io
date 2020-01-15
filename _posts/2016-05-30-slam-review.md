@@ -37,7 +37,8 @@ Meanwhile in early 2000s, there were several SLAM or related works also worth me
 
 The problem of traditional EKF based visual SLAM mainly lies in computation effort as the map grows, since computation grows quadratically with the number of landmarks. The implementation of putting all landmarks together with the robot pose in a long state vector and a huge covariance matrix seems not making sense (because not all observed features have direct constraints with each other), and, as the covariance matrix is not sparse, computation resource spent on the iterative calculation of the covariance matrix is huge.
 
-![](/images/monovsptam.png)<br>
+<!-- ![](/images/monovsptam.png)<br> -->
+[![lXLzgs.md.png](https://s2.ax1x.com/2020/01/15/lXLzgs.md.png)](https://imgchr.com/i/lXLzgs)<br>
 __Figure 1__: _Mono-SLAM vs PTAM. Left: visualized result of MonoSLAM. Middle: visualized result of keyframe-based tracking and mapping with PTAM. Right: demo of PTAM._
 
 Interesting enough, inspiring work that set a new standard framework for visual SLAM did not come from the mobile robotics community, but from two researchers on Augmented Reality (AR). In 2007, Georg Klein and David Murray proposed Parallel Tracking and Mapping (PTAM) for small AR workspace [24]. PTAM is also a feature-based SLAM algorithm that tracks and maps many (hundreds of) features to achieve robustness. Simultaneously, it runs in real-time by creatively parallelizing the motion estimation and mapping tasks and by relying on efficient keyframe-based Bundle Adjustment (BA) instead of Bayesian filtering for pose and map refinement, which are two main reasons to make PTAM outperform MonoSLAM and the like in both efficiency and precision. Although PTAM is designed specifically for AR application and only works well in small desktop space without global map management, its implementation style of parallelizing tracking and mapping and keyframe-based map management is used by most of modern feature based visual SLAM systems (like ORB-SLAM [25]) or VO systems (like SVO [26]).
@@ -59,7 +60,8 @@ As robotics and computer vision both become considerately prominent research fie
 
 ORB-SLAM is a more traditional feature based system, and quite similar to PTAM in some way, yet attains much more impressive performance in practice. Its main improvement compared to PTAM includes but not limited to: 1) implement 3 parallel threads, namely tracking, mapping, and loop closing to achieve consistent localization and mapping, while PTAM does not have loop closing; 2) automatic map initialization with a model selection on two paralleling thread calculating Homography and Fundamental ego-motion with RANSAC, while PTAM requires manual operation to finish initialization; 3) use ORB feature detector and descriptor instead of image patches used in PTAM, improving robustness of image tracking and feature matching under scale and orientation change; 4) multi-scale mapping, including local graph for pose bundle adjustment, co-visibility graph for local bundle adjustment, and essential graph for global bundle adjustment after loop closure detection.
 
-![](/images/lsdorb.png)<br>
+<!-- ![](/images/lsdorb.png)<br> -->
+[![lXLx3j.md.png](https://s2.ax1x.com/2020/01/15/lXLx3j.md.png)](https://imgchr.com/i/lXLx3j)<br>
 __Figure 2__: _State of art visual SLAM systems. Left: result of LSD-SLAM. Right: result of ORB-SLAM_.
 
 
@@ -73,7 +75,8 @@ The maturity of visual SLAM can also be reflected from their application in comm
 
 As mentioned above,  the main challenge in large scale mapping remains in long term visual place recognition. This problem is extremely difficult to solve based only on geometric methods, which are what most current visual SLAM systems use. These several years has seen some effort in utilizing semantic information in image to do object detection for mapping and scene recognition, such as SLAM++ [38] by R. F. Salas-Moreno et al. Due to complicated nature of place recognition problem, increasing number of researches on the utilization of visual semantic information in visual SLAM is predictable in recent future. In fact, this has already been happening, reflected by the frequent appearance of this topic in CVPR, RSS and ICRA workshops in recent years, as shown in Figure 3.
 
-![](/images/robotvision.png)<br>
+<!-- ![](/images/robotvision.png)<br> -->
+[![lXLvCQ.md.png](https://s2.ax1x.com/2020/01/15/lXLvCQ.md.png)](https://imgchr.com/i/lXLvCQ)<br>
 __Figure 3__: _Workshops on visual place recognition in CV and robotics conferences recent years_ [37].
 
 

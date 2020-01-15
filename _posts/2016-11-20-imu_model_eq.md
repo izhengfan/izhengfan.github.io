@@ -52,7 +52,8 @@ $$ \dot{\bf p}={\bf v}, \dot{\bf v} = {\bf a} $$
 
 首先，如下图（左）所示，考虑一个从原点出发的向量 $\bf r$ 绕单位轴 $\bf u$ 旋转，角速度大小为 $\dot{\theta}$。
 
-![](/images/rot_time_der.png) 
+<!-- ![](/images/rot_time_der.png)  -->
+![](https://ftp.bmp.ovh/imgs/2020/01/60c776f513f7b409.png)
 
 角速度矢量可以表示为 ${\boldsymbol \omega}=\dot{\theta}\bf u$。易得向量 $\bf r$ 末端点 P 的速度矢量，即 $\bf r$的时间一阶导为
 
@@ -175,7 +176,8 @@ ${}^I_G \dot{\bar{q}}$ 由 $(1.6)$ 直接得到。注意这里角速度 $\boldsy
 
 这部分在 1-1 的基础上，讨论参考坐标系不是惯性系的情况，熟悉科氏加速度的读者可以跳过。我们仍利用 1-1 中的图，但这次把绕惯性系 {A} 中固定单位轴 $\bf u$ 旋转的 {B} 作为参考坐标系。考虑下图， 点 P 相对于 {B} 运动，记 $^B{\bf r}$ 分别为 P 在 {B} 下的坐标，$\bf r$ 为 P 的绝对坐标（即 {A} 下坐标）， $\bf R$ 仍为 {B} 相对于 {A} 的旋转矩阵，易知 $ {\bf r}={\bf R}^B{\bf r}$。
 
-![](/images/acc_with_rot.png)
+<!-- ![](/images/acc_with_rot.png) -->
+![](https://ftp.bmp.ovh/imgs/2020/01/b73a03bd1c798e2e.png)
 
 求一阶时间导，并利用公式 $(1.1)$：
 
