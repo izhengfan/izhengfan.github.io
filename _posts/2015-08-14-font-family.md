@@ -15,11 +15,12 @@ Type is a rather general and informative concept. In this post we are mainly dis
 
 ### Serif and Sans-serif
 
-![](http://www.w3schools.com/css/serif.gif)
+![lXHpTg.jpg](https://s2.ax1x.com/2020/01/15/lXHpTg.jpg)
 
 One of the most important concept in font is 'serif', which means a short line at the end of the main strokes of a character. Usually it acts as a decotation part in the character to make the whole body look more elegant and graceful, and increase readability. Therefore, the noun 'Serif' also refers to a font group featured with serif. In contrast, 'Sans-serif' represents a font group without serif decoration. In CSS, such font group is named 'generic family', and a specific font family with unique design style is called 'font family'. Apart from Serif and Sans-serif, Monospace is also a generic family, in which every character covers the same width. 
 
-![](/images/font-family.png)
+<!-- ![](/images/font-family.png) -->
+![lXHifs.png](https://s2.ax1x.com/2020/01/15/lXHifs.png)
 
 Different generic families have different appropriate applications. Generally speaking, Serif looks good in printed situations, with varied serif designs resulting in stylish visual effects, thus bringing more functional and subtle feeling to the readers. In digital screen, however, since all shapes are presented with combined discrete dots, the display effect of a character is limited by screen resolution. Serif fonts, especially in low-resolution screens, tends to be too sawtooth-shaped or too slender to be easily recognised by the readers, especially for Chinese characters. Therefore, Sans-serif fonts, like Arial and Microsoft Yahei, with strong and clear main strokes, is a better choice in digital screen display, which is also why it is widely used in web design. Monospace fonts are often adopted in programming editors and webpage code blocks. 
 
@@ -27,7 +28,8 @@ Different generic families have different appropriate applications. Generally sp
 
 For a font family, legibility defines how easy it is to recognize what a character is. The most typical sample is the design of character captital 'I', lowercase 'l' and number '1', as shown in the picture below.
 
-![](/images/font-legi.png)
+<!-- ![](/images/font-legi.png) -->
+![lXHPYj.png](https://s2.ax1x.com/2020/01/15/lXHPYj.png)
 
 As you can see, for some font families like Consolas, you can easily tell any one of these 3 characters from each other, which is not the case for other ones like Arial (captital 'I' & lowercase 'l') and Times New Roman (lowercase 'l' & number '1'). Legibility should be closely considered in those situations where indivisual character accuracy is significant, like showing password, and programming. That is why many programmers choose Consolas as the default font of their editors.
 

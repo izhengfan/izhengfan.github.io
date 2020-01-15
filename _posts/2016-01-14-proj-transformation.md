@@ -13,7 +13,8 @@ __Contents__
 
 ### Typical Types of Transformation of 2D Planes
 
-![](/images/proj.jpg)
+<!-- ![](/images/proj.jpg) -->
+![lXbegI.jpg](https://s2.ax1x.com/2020/01/15/lXbegI.jpg)
 
 Key differences about projective and affine transformations:
 
@@ -27,21 +28,26 @@ A transformation that preserves lines and parallelism (maps parallel lines to pa
 
 A _nonproportional scaling transformation_ centered at the origin has the form
 
-![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img41.gif)
+<!-- ![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img41.gif) -->
+![lXbmvt.gif](https://s2.ax1x.com/2020/01/15/lXbmvt.gif)
 
 where `a,b != 0` are the scaling factors (real numbers). The corresponding matrix in homogeneous coordinates is
 
-![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img43.gif)
+<!-- ![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img43.gif) -->
+![lXbuKP.gif](https://s2.ax1x.com/2020/01/15/lXbuKP.gif)
 
 A _shear_ preserving horizontal lines has the form
 
-![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img44.gif)
+<!-- ![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img44.gif) -->
+![lXbZ8A.gif](https://s2.ax1x.com/2020/01/15/lXbZ8A.gif)
 
 where `r` is the shearing factor (see Figure 1). The corresponding matrix in homogeneous coordinates is
 
-![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img45.gif)
+<!-- ![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img45.gif) -->
+![lXbVCd.gif](https://s2.ax1x.com/2020/01/15/lXbVCd.gif)
 
-![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img46.gif)
+<!-- ![](http://www.geom.uiuc.edu/docs/reference/CRC-formulas/img46.gif) -->
+![lXbKDf.gif](https://s2.ax1x.com/2020/01/15/lXbKDf.gif)
   
 Figure 1: A shear with factor r=1/2.
 
@@ -51,11 +57,13 @@ Every affine transformation is obtained by composing a scaling transformation wi
 
 A transformation that maps lines to lines (but does not necessarily preserve parallelism) is a _projective transformation_. Any plane projective transformation can be expressed by an invertible 3×3 matrix in homogeneous coordinates:
 
-![](/images/prjct.png)
+<!-- ![](/images/prjct.png) -->
+![lXbMb8.png](https://s2.ax1x.com/2020/01/15/lXbMb8.png)
 
 Conversely, any invertible 3×3 matrix defines a projective transformation of the plane. Projective transformations (if not affine) are not defined on all of the plane, but only on the complement of a line (the missing line is "mapped to infinity").  
 
-![](/images/vanishline.png)
+<!-- ![](/images/vanishline.png) -->
+![lXblVS.png](https://s2.ax1x.com/2020/01/15/lXblVS.png)
 
 Figure above: In projective transformations (if not affine), a vanishing line in infinity can be warped to be a finite line.
 
@@ -63,7 +71,8 @@ Figure above: In projective transformations (if not affine), a vanishing line in
 
 The term _perspecive transformation_ is also commonly seen. Perspective transformation projects a 3D geometric object into a 2D plane. It can be seen as a common example of projective transformation. Strictly speaking it gives a transformation from one plane to another, but if we identify the two planes by (for example) fixing a cartesian system in each, we get a projective transformation from the plane to itself, as shown in the figure below. 
 
-![](/images/perspective.png)
+<!-- ![](/images/perspective.png) -->
+![lXb1Ug.png](https://s2.ax1x.com/2020/01/15/lXb1Ug.png)
 
 Figure above: A perspective transformation with center O, mapping the plane P to the plane Q. The transformation is not defined on the line L, where P intersects the plane parallel to Q and going throught O.
 
@@ -78,7 +87,8 @@ projectivities is a projectivity.
 
 This can be illustrated by the figure below:
 
-![](/images/lineprjc.png)
+<!-- ![](/images/lineprjc.png) -->
+![lXb35Q.png](https://s2.ax1x.com/2020/01/15/lXb35Q.png)
 
 Figure above: A line projectivity. Points {a, b, c} are related to points {A, B, C} by a line-to-line perspectivity. Points {a', b', c'} are also related to points {A, B, C} by a perspectivity. However, points {a, b, c} are related to points {a', b', c'} by a projectivity; they are not related by a perspectivity because lines joining corresponding points are not concurrent. In fact the pairwise intersections result in three distinct points {p, q, r}.
 

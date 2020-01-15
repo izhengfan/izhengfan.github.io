@@ -16,11 +16,13 @@ Stdafx.h一定要被 Stdafx.cpp 源文件 include 。这个源文件会被最先
 
 如何快速生成预编译文件？实际上，在 Visual Studio 创建 Win32 Console Application 的项目引导中，附加选项里 Precompiled header 打勾就好了。看下图。
 
-![appset](/images/noempty.png)
+<!-- ![appset](/images/noempty.png) -->
+[![lXH6nf.png](https://s2.ax1x.com/2020/01/15/lXH6nf.png)](https://imgchr.com/i/lXH6nf)
 
 总结：
 
-![msdn](/images/yubianyi.jpg)
+<!-- ![msdn](/images/yubianyi.jpg) -->
+[![lXHcB8.jpg](https://s2.ax1x.com/2020/01/15/lXHcB8.jpg)](https://imgchr.com/i/lXHcB8)
 
 参考：
 
