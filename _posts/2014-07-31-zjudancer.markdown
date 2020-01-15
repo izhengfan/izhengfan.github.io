@@ -29,11 +29,9 @@ The whole hardware configuration of our robots are independently designed. Curre
 
 ### Selected Game
 
-In Robocup2013 Netherlands, we (red) met CITBrains kid (blue) in the 3-4 final and won the game finally.
+In Robocup2013 Netherlands, we (red) met CITBrains kid (blue) in the 3-4 final and won the game finally, watch this game on YouTube:
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/AyXuNiPpCmk?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
 <br>
-
-[Click here](http://www.nlict.zju.edu.cn/zjudancer/index.html) to view more about our team.
 
 [Click here](https://www.youtube.com/user/ZJUDancer) to watch us on YouTube.
