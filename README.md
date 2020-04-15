@@ -32,4 +32,4 @@ You can make a Pull Request to put your site url here.
 
 - https://www.ogura.io/
 
-- https://www.hadronw.com/
+- https://hadronw.github.io/
