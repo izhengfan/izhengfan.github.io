@@ -52,6 +52,6 @@ Conference Papers
 
 ### Others
 
-Links to my friends: [David](http://www.mypolyuweb.hk/dnavar/) \| [LU Yujie](https://ytdonkey3456.wixsite.com/yjlu/) \| [WANG Zerui](http://www.wangzerui.com)
+Links to my friends: [David](https://www.polyu.edu.hk/me/david/) \| [LU Yujie](https://ytdonkey3456.wixsite.com/yjlu/) \| [WANG Zerui](http://www.wangzerui.com)
 
 This site is built with [Jekyll](http://jekyllrb.com/) hosted on Github.
