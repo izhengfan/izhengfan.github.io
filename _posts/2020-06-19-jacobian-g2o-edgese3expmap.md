@@ -7,7 +7,7 @@ tags: [robotics, SLAM, g2o]
 ---
 
 I has [been asked](https://github.com/izhengfan/se2lam/issues/26) about how to derive the Jacobians in [`g2o::EdgeSE3Expmap`](https://github.com/RainerKuemmerle/g2o/blob/20160424_git/g2o/types/sba/types_six_dof_expmap.cpp#L271).
-Here is my derivation (note that $T_i$ and $T_j$ are the state vectors of pose $i$ and $j$, $e$ is the error function, and $\bar{T}_{ij}$ is the measurment):
+Here is my derivation (note that $T_i$ and $T_j$ are the state of pose $i$ and $j$, $e$ is the error function, and $\bar{T}_{ij}$ is the measurment):
 
 $$
 \begin{aligned}
