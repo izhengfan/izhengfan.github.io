@@ -106,18 +106,18 @@ $$ {\bf q} = [{\bf u}\sin\frac{\theta}{2} \quad \cos\frac{\theta}{2}] \tag{1.4}$
 四元数乘法 $\otimes$ 为类似于多项式乘法的逐项相乘：
 
 $$
-\begin{align}
+\begin{aligned}
  {\bf q}\otimes {\bf p} 
  =  & (q_1 i + q_2 j + q_3 k + q_4)(p_1 i+p_2j+p_3k+p_4) \\
  = & (q_1p_4+q_2p_3-q_3p_2+q_4p_1)i+(-q_1p_3+q_2p_4+q_3p_1+q_4p_2)j+\\
  &(q_1p_2-q_2p_1+q_3p_4+q_4p_3)k + (-q_1p_1-q_2p_2-q_3p_3+q_4p_4)
-\end{align}
+\end{aligned}
 $$
 
 这个计算结果可以表达为多种形式：
 
 $$
-\begin{align}
+\begin{aligned}
  {\bf q}\otimes {\bf p} 
  & = \begin{bmatrix}
  q_4{\bf I}_3+{\boldsymbol v}_q^{\land} & {\boldsymbol v}_q \\
@@ -131,7 +131,7 @@ $$
  \end{bmatrix} \begin{bmatrix}
  {\boldsymbol v}_q \\ q_4 
  \end{bmatrix} 
-\end{align}
+\end{aligned}
 $$
 
 四元数乘法和其对应的两个旋转矩阵相乘物理意义是一样的，即 ${\bf R}({\bf q\otimes p})={\bf R}({\bf q}){\bf R}({\bf p})$。四元数对应的旋转矩阵为：
@@ -142,14 +142,14 @@ $$ {\bf R}({\bf q}) = (2q_4^2-1){\bf I}_3 +2q_4{\boldsymbol v}^{\land} + 2{\bold
 
 四元数对时间一阶导为
 
-$$\begin{align}
+$$\begin{aligned}
  \dot{\bf q} 
  &= \frac{1}{2} \begin{bmatrix} {\boldsymbol \omega}^{\land} & {\boldsymbol\omega} \\ -{\boldsymbol \omega}^T & 0 \end{bmatrix} {\bf q} := \frac{1}{2}{\boldsymbol \Omega}({\boldsymbol \omega}){\bf q} \tag{1.6} \\
  &= \frac{1}{2} \begin{bmatrix}
  q_4{\bf I}_3-{\boldsymbol v}^{\land} \\
  -{\boldsymbol v}^T 
  \end{bmatrix} {\boldsymbol \omega}
-\end{align}$$
+\end{aligned}$$
 
 读者可能注意到了 $(1.6)$ 和 $(1.1)$ 形式上的相似。这里 $\boldsymbol \omega$ 的意义也是一样的。$(1.6)$ 的推导可以参考 [2]，这里不赘述。
 
@@ -158,13 +158,13 @@ $$\begin{align}
 
 有了前置知识的铺垫之后，我们可以给出 IMU 的运动模型：
 
-$$ \begin{align}
+$$ \begin{aligned}
 {}^I_G \dot{\bar{q}} &= \frac{1}{2}{\boldsymbol \Omega}({\boldsymbol \omega}){}^I_G \bar{q}\\
  \dot{\bf b}_g &= {\bf n}_{wg}\\
 {}^G\dot{\bf v}_I &= {}^G{\bf a} \tag{1.7}\\
  \dot{\bf b}_a &= {\bf n}_{wa} \\
  {}^G\dot{\bf p}_I &= {}^G{\bf v}_I 
- \end{align}
+ \end{aligned}
 $$
 
 ${}^I_G \dot{\bar{q}}$ 由 $(1.6)$ 直接得到。注意这里角速度 $\boldsymbol \omega$ 是在体坐标系 {I} 下表达的，与 $(1.1)$ 处相反。原因是 ${}^I_G \bar{q}$ 表示的旋转方向与 $(1.1)$ 处的 $\bf R$ 是相反的。其他的四项，速度和加速度都很简单，bias 两项在下面观测模型部分讲。
@@ -185,24 +185,24 @@ $$ {\bf v} = \dot{\bf r} = \dot{\bf R} {}^B{\bf r} + {\bf R}^B\dot{\bf r} = {\bo
 
 记 P 在 {B} 下速度为 $^B\bf v$，于是
 
-$$\begin{align}
+$$\begin{aligned}
   {\bf v} 
   & = {\boldsymbol \omega}^{\land}{\bf r} + {\bf R}^B{\bf v} \\
   & = {\boldsymbol \omega}\times{\bf r}+ {\bf v}_r
    \tag{2.0}
-\end{align}$$
+\end{aligned}$$
 
 请注意，这里用 ${\bf v}_r$ 来表达「相对速度」的概念，准确定义为 P 相对于 {B} 的速度，在惯性系 {A} 下的表达。请分清 ${\bf v}_r$、$\bf v$ 以及 $^B\bf v$ 三者之间的区别和联系。
 
 再对 $(2.0)$ 求时间导：
 
 $$
-\begin{align}
+\begin{aligned}
  {\bf a} = \dot{\bf v} 
  & = \dot{\boldsymbol \omega}\times {\bf r} + {\boldsymbol \omega} \times \dot{\bf r}+ \dot{\bf R} {}^B{\bf v} + {\bf R}{}^B\dot{\bf v} \\
  & = {\boldsymbol \alpha}\times {\bf r}+{\boldsymbol \omega}\times（{\boldsymbol \omega}\times{\bf r}+ {\bf v}_r）+ {\boldsymbol \omega}\times{\bf R}{}^B{\bf v}+{\bf R}{}^B{\bf a} \\
  & = {\boldsymbol \alpha}\times {\bf r}+{\boldsymbol \omega}\times({\boldsymbol \omega}\times{\bf r})+2{\boldsymbol \omega}\times{\bf v}_r+{\bf a}_r \tag{2.1}
-\end{align} 
+\end{aligned} 
 $$
 
 我们来逐项分析上面这个式子。第一项中 ${\boldsymbol \alpha}$ 为 {B} 的角加速度，所以第一项的物理意义是 {B} 旋转所造成的 P 的切向加速度。第二项是 {B} 旋转所造成的向心加速度。第四项为 P 相对于 {B} 的加速度，但在惯性系 {A} 下表达——类似于 ${\bf v}_r$，定义相对加速度 ${\bf a}_r$。第三项比较特殊，为 {B} 的旋转运动与 P 相对 {B} 的平移运动耦合产生的加速度，称为「科氏加速度」。可以看到，除了第四项外，另外三项都和 {B} 的旋转有关。
@@ -241,12 +241,12 @@ $$ w[k] \sim \mathcal{N}(0,1) \\
 
 $$ n_d[k] \triangleq n(t_0+\Delta t)\simeq\frac{1}{\Delta t}\int_{t_0}^{t_0+\Delta t}n(\tau)dt $$
 
-$$\begin{align}
+$$\begin{aligned}
 E(n_d[k]^2) 
 &= E(\frac{1}{\Delta t^2}\int_{t_0}^{t_0+\Delta t}\int_{t_0}^{t_0+\Delta t}n(\tau)n(t)d\tau dt) \\
 &= E( \frac{\sigma_g^2}{\Delta t^2}\int_{t_0}^{t_0+\Delta t}\int_{t_0}^{t_0+\Delta t}\delta(t-\tau)d \tau dt)\\
 &= E(\frac{\sigma_g^2}{\Delta t})
-\end{align}$$
+\end{aligned}$$
 
 所以有　$\sigma_{gd}^2=\frac{\sigma_g^2}{\Delta t}$，即 $\sigma_{gd}=\frac{\sigma_g}{\sqrt{\Delta t}}$。
 
@@ -267,12 +267,12 @@ $$ w[k] \sim \mathcal{N}(0,1) \\
 
 $$ b_d[k] \triangleq b(t_0) + \int_{t_0}^{t_0+\Delta t}n(t)dt $$
 
-$$ \begin{align}
+$$ \begin{aligned}
 E((b_d[k]-b_d[k-1])^2) 
 &=E(\int_{t_0}^{t_0+\Delta t}\int_{t_0}^{t_0+\Delta t}n(t)n(\tau)d \tau dt)\\
 &= E({\sigma_{bg}^2}\int_{t_0}^{t_0+\Delta t}\int_{t_0}^{t_0+\Delta t}\delta(t-\tau)d \tau dt)\\
 &= E(\sigma_{bg}^2\Delta t)
-\end{align}
+\end{aligned}
 $$
 
 所以有　$\sigma_{bgd}^2=\sigma_{bg}^2\Delta t$，即 $\sigma_{bgd}=\sigma_{bg}\sqrt{\Delta t}$。
@@ -319,12 +319,12 @@ $$
 
 旋转量是非线性的，不宜像线性量那样使用 $\tilde{ \bf x}= x-\hat{x}$ 来定义误差量。这里我们使用四元数误差小量来定义误差量。根据 $(1.4)$，四元数可以用旋转向量经简单的转换得到。假定绕单位轴 $\bf u$ 旋转了一个角度小量 $\delta \theta$，用四元数表达为：
 
-$$\begin{align} 
+$$\begin{aligned} 
 \delta {\bf q} 
 &= \begin{bmatrix} {\bf u}\sin{\frac{\delta \theta}{2}} \\ \cos{\frac{\delta \theta}{2}} \end{bmatrix}\\
 &\simeq \begin{bmatrix} {\bf u}\frac{\delta \theta}{2} \\ 1 \end{bmatrix} \triangleq 
 \begin{bmatrix} \frac{\boldsymbol{\delta \theta}}{2} \\ 1 \end{bmatrix}
-\end{align} $$
+\end{aligned} $$
 
 于是，可以用 $\delta {\bf q} $ 来表示旋转的真实值和估计值之间的误差，具体关系为
 

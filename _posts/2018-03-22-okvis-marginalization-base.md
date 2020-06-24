@@ -80,12 +80,12 @@ $$
 于是，$\rm \bar{x}$ 时的 b 可以估计为：
 
 $$
-\begin{align}
+\begin{aligned}
 \rm b
 &= \rm b_{0} + \frac{\partial \rm b}{\partial\Delta\chi}\Big|_{\rm x_0} \Delta\chi\\
 &= \rm b_{0} - J^T\Omega \frac{\partial\rm e}{\partial\Delta\chi}\Big|_{\Delta\chi=0} \Delta\chi \\
 &= \rm b_{0} - H\Delta\chi \tag{24}
-\end{align}
+\end{aligned}
 $$
 
 即

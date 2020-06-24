@@ -58,12 +58,12 @@ inline bool Transformation::oplus(
 旋转和平移完全解耦的好处是计算雅克比矩阵非常方便。比如，计算 oplusJacobian：
 
 $$
-\begin{align}
+\begin{aligned}
 &\rm \frac{\partial x}{\partial \Delta x}:\\
 &\rm \frac{\partial q}{\partial \delta \alpha} = \frac{\partial Q_{\bar{q}}\,\delta q}{\partial \delta \alpha} = \frac{1}{2}Q_{\bar{q}}I_{4\times 3}\\
 &\rm \frac{\partial p}{\partial \delta p} = I_{3}\\
 &\rm \frac{\partial q}{\partial \delta p} = \frac{\partial p}{\partial \delta \alpha} = 0
-\end{align}
+\end{aligned}
 $$
 
 
@@ -91,12 +91,12 @@ inline bool Transformation::oplusJacobian(
 计算 liftJacobian 也类似：
 
 $$
-\begin{align}
+\begin{aligned}
 &\rm \frac{\partial \Delta x}{\partial x}:\\
 &\rm \frac{\partial \delta \alpha}{\partial q}=\frac{\partial\delta\alpha}{\partial\delta q} \frac{\partial q\otimes\bar{q}^{-1}}{\partial q} = 2I_{3\times 4}\,Q_{\bar{q}^{-1}}\\
 &\rm \frac{\partial \delta p}{\partial p} = I_3\\
 &\rm \frac{\partial \delta \alpha}{\partial p} = \frac{\partial \delta p}{\partial q} = 0
-\end{align}
+\end{aligned}
 $$
 
 其实现代码在 `Transformation::liftJacobian()` 函数中：

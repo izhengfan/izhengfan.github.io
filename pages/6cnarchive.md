@@ -8,7 +8,7 @@ permalink: /cnarchive/
 
 ---
 
-标签: {% for tag in site.tags %}<block class="tag"><a href="#{{ tag | first }}">{{ tag | first }} </a></block>{% endfor %}
+标签: {% for tag in site.tags %}<block class="blog-tag"><a href="#{{ tag | first }}">{{ tag | first }} </a></block>{% endfor %}
 {% for post in site.posts  %}{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
 {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
@@ -18,7 +18,7 @@ permalink: /cnarchive/
 {% if forloop.last %}</ul>{% else %}{% if this_year != next_year %}</ul><legend id="{{next_year}}">{{next_year}}</legend><ul>{% endif %}{% endif %}
 {% endfor %} 
 <h3 id="tags">标签</h3>
-<p>{% for tag in site.tags %}<block class="tag"><a href="#{{ tag | first }}">{{ tag | first }} </a></block>{% endfor %}</p>
+<p>{% for tag in site.tags %}<block class="blog-tag"><a href="#{{ tag | first }}">{{ tag | first }} </a></block>{% endfor %}</p>
 {% for tag in site.tags %}
   <div>
 	<legend id="{{ tag | first }}">{{ tag | first }}</legend>
