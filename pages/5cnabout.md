@@ -64,7 +64,7 @@ permalink: /cnabout/
 个人：[Github](https://github.com/izhengfan) \| [知乎](http://www.zhihu.com/people/izhengfan)
 
 师友：[刘云辉教授](http://www.mae.cuhk.edu.hk/people/list.php?name=yhliu) \|
-[David](https://www.polyu.edu.hk/me/david/) \| [鲁豫杰](https://ytdonkey3456.wixsite.com/yjlu/) \| [王泽睿](http://www.wangzerui.com)
+[David](https://www.polyu.edu.hk/me/david/) \| [鲁豫杰](https://ytdonkey3456.wixsite.com/yjlu/) \| [王泽睿](http://www.wangzerui.com) \| [邵鸿章](https://steve-shao.github.io) 
 
 网站设计：[谢益辉](http://yihui.org/cn/)
 
