@@ -36,4 +36,4 @@ You can make a Pull Request to put your site url here.
 
 - https://blog.bobliao.xyz/
 
-- http://laura-wang.github.io/
+- https://laura-wang.github.io/
