@@ -7,12 +7,14 @@ permalink: /about/
 ### ZHENG Fan 郑帆
 
 I am a researcher in robotics and computer vision, with interest in SLAM and mobile robot navigation.
-I got my PhD in [MAE CUHK](http://www.mae.cuhk.edu.hk) supervised by [Prof LIU Yun-Hui](http://www.mae.cuhk.edu.hk/people/list.php?name=yhliu).
+I got my PhD in [MAE CUHK](http://www.mae.cuhk.edu.hk) supervised by [Prof LIU Yun-Hui](http://www.ri.cuhk.edu.hk/yhliu).
 Before coming to CUHK, I received my B. Eng degree in Mechatronic Engineering in Zhejiang University.
 
 I swim and jog. I am a fan of Golden State Warriors and Stephen Curry.
 
 Email: [hi@fzheng.me](mailto:hi@fzheng.me)
+
+[Github](https://github.com/izhengfan) \| [Google Scholar](https://scholar.google.com/citations?user=PZOTyfIAAAAJ&hl=en) \| [ResearchGate](https://www.researchgate.net/profile/Fan_Zheng15) \| [Zhihu](http://www.zhihu.com/people/izhengfan)
 
 Comment or leave a message via [Github Issues](https://github.com/izhengfan/izhengfan.github.io/issues).
 

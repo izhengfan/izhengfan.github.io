@@ -7,7 +7,7 @@ permalink: /cnabout/
 ### 郑帆
 
 机器人、计算机视觉研究者，关注 SLAM 和移动机器人导航。
-于[香港中文大学机械与自动化工程系](http://www.mae.cuhk.edu.hk/)获博士学位，导师是[刘云辉教授](http://www.mae.cuhk.edu.hk/people/list.php?name=yhliu)。
+于[香港中文大学机械与自动化工程系](http://www.mae.cuhk.edu.hk/)获博士学位，导师是[刘云辉教授](http://www.ri.cuhk.edu.hk/yhliu)。
 本科毕业于浙江大学机械电子工程专业。
 
 游泳、跑步。看杂书、电影。看 NBA 比赛，是金州勇士和斯蒂芬 · 库里球迷。
@@ -15,6 +15,8 @@ permalink: /cnabout/
 无求备，勿苛求完美、纠结小节是也。严灵峰老人也有「无求备斋」，这真的是巧合。
 
 邮箱：[hi@fzheng.me](mailto:hi@fzheng.me) 
+
+[Github](https://github.com/izhengfan) \| [Google Scholar](https://scholar.google.com/citations?user=PZOTyfIAAAAJ&hl=en) \| [ResearchGate](https://www.researchgate.net/profile/Fan_Zheng15) \| [知乎](http://www.zhihu.com/people/izhengfan)
 
 留言或评论请使用 [Github Issues](https://github.com/izhengfan/izhengfan.github.io/issues)。
 
@@ -59,11 +61,9 @@ permalink: /cnabout/
 
 逻辑上中英文分开，但归档时中英文博文是一起的，并支持订阅——如果你使用 RSS 阅读器，欢迎点<a href="/feed.xml">订阅链接</a>。
 
-### 链接
+### 其他
 
-个人：[Github](https://github.com/izhengfan) \| [知乎](http://www.zhihu.com/people/izhengfan)
-
-师友：[刘云辉教授](http://www.mae.cuhk.edu.hk/people/list.php?name=yhliu) \|
+友情链接：
 [王江柳](https://laura-wang.github.io/) \| 
 [David](https://www.polyu.edu.hk/me/david/) \| [鲁豫杰](https://ytdonkey3456.wixsite.com/yjlu/) \| [王泽睿](http://www.wangzerui.com) \| [邵鸿章](https://steve-shao.github.io) 
 
