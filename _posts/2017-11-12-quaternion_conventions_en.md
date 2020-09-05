@@ -6,7 +6,7 @@ categories: en
 tags: robotics
 ---
 
-Quaternion is a commonly used 3D rotation parameterization. It is written like $$\mathbf{q}=q_0 + q_1 i + q_2 j + q_3 k$$, in which $$i, j, k$$ forms the three bases of the imaginary part (analogous to the imaginary part of a complex number) and $$i^2=j^2=k^2=-1$$. Usually a rotation is represented by a unit quaternion (a quaternion whose norm is 1).
+Quaternion is a commonly used 3D rotation parameterization. It is written like $\mathbf{q}=q_0 + q_1 i + q_2 j + q_3 k$, in which $i, j, k$ forms the three bases of the imaginary part (analogous to the imaginary part of a complex number) and $i^2=j^2=k^2=-1$. Usually a rotation is represented by a unit quaternion (a quaternion whose norm is 1).
 
 I used to think there is only one notation for quaternions, like the one from Wikipedia [\[1\]](https://en.wikipedia.org/wiki/Quaternion):
 
@@ -16,7 +16,7 @@ With such definition, the transformation from a unit quaternion to a rotation ma
 
 $$ {\bf R}=\begin{bmatrix} 1-2q_2^2-2q_3^2 & 2q_1q_2-2q_0q_3 & 2q_1q_3+2q_0q_2 \\ 2q_1q_2+2q_0q_3 & 1-2q_1^2-2q_3^2 & 2q_2q_3-2q_0q_1 \\ 2q_1q_3-2q_0q_2 & 2q_2q_3+2q_0q_1 & 1-2q_1^2-2q_2^2 \end{bmatrix} $$
 
-However, I recently noticed that in some literature the transformation from quaternion to rotation matrix is not the one above, but its transpose. This confused me. My confusion was cleared when I read a tutorial _Indirect Kalman Filter for 3D Attitude Estimation_ [\[2\]](http://mars.cs.umn.edu/tr/reports/Trawny05b.pdf)  by Stergios I. Roumeliotis etc. The truth is that there are two conventions for quaternions, _Hamilton_ and _JPL_. The key difference between the two conventions lies in the relation between the three imaginary bases. In Hamilton convention, $$ijk=-1$$, while JPL defines $$ijk = 1$$. As consequences, the multiplication of quaternions and the transformation between quaternions and other rotation parameterizations differ with different quaternion conventions.
+However, I recently noticed that in some literature the transformation from quaternion to rotation matrix is not the one above, but its transpose. This confused me. My confusion was cleared when I read a tutorial _Indirect Kalman Filter for 3D Attitude Estimation_ [\[2\]](http://mars.cs.umn.edu/tr/reports/Trawny05b.pdf)  by Stergios I. Roumeliotis etc. The truth is that there are two conventions for quaternions, _Hamilton_ and _JPL_. The key difference between the two conventions lies in the relation between the three imaginary bases. In Hamilton convention, $ijk=-1$, while JPL defines $ijk = 1$. As consequences, the multiplication of quaternions and the transformation between quaternions and other rotation parameterizations differ with different quaternion conventions.
 
 The co-existence of two conventions for quaternions is still confusing for me. Quaternion is introduced by mathematician William Rowan Hamilton, so I guess Hamilton convention has been used from the beginning by him. Then where the hell is JPL convention from? According to the materials I read that use JPL (like the tutorial by Roumeliotis), it comes from the well-known NASA Jet Propulsion Laboratory (JPL), and the cited original document seems to be a tech report titled _Quaternions - Proposed Standard Conventions_, which, unfortunately, I failed to search and find. 
 
