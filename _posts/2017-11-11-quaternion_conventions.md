@@ -1,6 +1,6 @@
 ---
 layout: cnmath
-title: "四元数的两种 notation：Hamilton 和 JPL"
+title: "四元数的两种定义形式：Hamilton 和 JPL"
 date: 2017-11-11 01:00:00
 categories: cn
 tags: robotics
