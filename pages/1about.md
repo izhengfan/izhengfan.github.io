@@ -10,8 +10,6 @@ I am a researcher in robotics and computer vision, with interest in SLAM and mob
 I got my PhD in [MAE CUHK](http://www.mae.cuhk.edu.hk) supervised by [Prof LIU Yun-Hui](http://www.ri.cuhk.edu.hk/yhliu).
 Before coming to CUHK, I received my B. Eng degree in Mechatronic Engineering in Zhejiang University.
 
-I swim and jog. I am a fan of Golden State Warriors and Stephen Curry.
-
 Email: [hi@fzheng.me](mailto:hi@fzheng.me)
 
 [Github](https://github.com/izhengfan) \| [Google Scholar](https://scholar.google.com/citations?user=PZOTyfIAAAAJ&hl=en) \| [ResearchGate](https://www.researchgate.net/profile/Fan_Zheng15) \| [Zhihu](http://www.zhihu.com/people/izhengfan)
@@ -27,6 +25,7 @@ Journal Papers
 
 Conference Papers
 
+* __F. Zheng__, Y. Lu, M. Fang, L. Li. "Conflict Model and Time Window Based Multi AGF Path Finding and Coordination". _Proc. IEEE International Conference on Real-time Computing and Robotics (RCAR)_, 2023. \[[DOI](https://doi.org/10.1109/RCAR58764.2023.10250094)\]
 * __F. Zheng__, Y.-H. Liu. "Visual-Odometric Localization and Mapping for Ground Vehicles Using SE(2)-XYZ Constraints". _Proc. IEEE International Conference on Robotics and Automation (ICRA)_, 2019. \[[DOI](https://doi.org/10.1109/ICRA.2019.8793928)\] \[[code](https://github.com/izhengfan/se2lam)\]
 * __F. Zheng__, Y.-H. Liu. "Keypoint Matching Outlier Removal with 3DMP Histogram Voting". _Proc. World Congress on Intelligent Control and Automation (WCICA)_, 2018. \[[DOI](https://doi.org/10.1109/WCICA.2018.8630329)\]
 * __F. Zheng__, Y.-H. Liu. "A Geometric Model for Fusing IMU into Monocular Visual Localization of 3-D Mobile Robots". _IEEE International Conference on Real-time Computing and Robotics_, 2016. \[[DOI](https://doi.org/10.1109/RCAR.2016.7784043)\]

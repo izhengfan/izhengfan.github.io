@@ -10,8 +10,6 @@ permalink: /cnabout/
 于[香港中文大学机械与自动化工程系](http://www.mae.cuhk.edu.hk/)获博士学位，导师是[刘云辉教授](http://www.ri.cuhk.edu.hk/yhliu)。
 本科毕业于浙江大学机械电子工程专业。
 
-游泳、跑步。看杂书、电影。看 NBA 比赛，是金州勇士和斯蒂芬 · 库里球迷。
-
 无求备，勿苛求完美、纠结小节是也。严灵峰老人也有「无求备斋」，这真的是巧合。
 
 邮箱：[hi@fzheng.me](mailto:hi@fzheng.me) 
@@ -29,6 +27,7 @@ permalink: /cnabout/
 
 会议
 
+* __F. Zheng__, Y. Lu, M. Fang, L. Li. "Conflict Model and Time Window Based Multi AGF Path Finding and Coordination". _Proc. IEEE International Conference on Real-time Computing and Robotics (RCAR)_, 2023. \[[DOI](https://doi.org/10.1109/RCAR58764.2023.10250094)\]
 * __F. Zheng__, Y.-H. Liu. "Visual-Odometric Localization and Mapping for Ground Vehicles Using SE(2)-XYZ Constraints". _Proc. IEEE International Conference on Robotics and Automation (ICRA)_, 2019. \[[DOI](https://doi.org/10.1109/ICRA.2019.8793928)\] \[[code](https://github.com/izhengfan/se2lam)\]
 * __F. Zheng__, Y.-H. Liu. "Keypoint Matching Outlier Removal with 3DMP Histogram Voting". _Proc. World Congress on Intelligent Control and Automation (WCICA)_, 2018. \[[DOI](https://doi.org/10.1109/WCICA.2018.8630329)\]
 * __F. Zheng__, Y.-H. Liu. "A Geometric Model for Fusing IMU into Monocular Visual Localization of 3-D Mobile Robots". _IEEE International Conference on Real-time Computing and Robotics_, 2016. \[[DOI](https://doi.org/10.1109/RCAR.2016.7784043)\]
