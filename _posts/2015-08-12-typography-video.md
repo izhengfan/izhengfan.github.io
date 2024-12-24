@@ -6,4 +6,4 @@ categories: cn
 tags: type 转载
 ---
 
-参看 [Type is Beautiful](http://www.typeisbeautiful.com/2007/06/28/)
+参看 [Type is Beautiful](https://www.thetype.com/2007/06/28/)
